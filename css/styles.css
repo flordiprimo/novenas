@@ -1,0 +1,74 @@
+/* Light Mode */
+body, .card-lighter {
+    background-color: #ececcd; /* Fondo de la página */
+    color: #333;
+}
+nav, #sidemenu {
+    background-color: #ececcd; /* Fondo del navbar en light mode */
+}
+.card-light, #sideMenu.light-mode {
+    background-color: #d1d1a8; /* Fondo de tarjetas y menú hamburguesa en light mode */
+}
+
+/* Dark Mode */
+body.dark-mode, .card-darker {
+    background-color: #333; /* Fondo de la página en dark mode */
+    color: #eaeaea;
+}
+
+body.dark-mode nav,
+body.dark-mode #sideMenu,
+body.dark-mode .card-lighter
+{
+    background-color: #2b2b2b; /* Fondo de tarjetas y menú hamburguesa en dark mode */
+    color: white;
+}
+.dark-mode .card-light {
+    background-color: #2b2b2b; /* Fondo oscuro */
+    color: white !important;
+}
+.dark-mode p {
+    color: white !important;
+}
+.font-serif { 
+    font-family: 'Merriweather', serif; 
+}
+
+/* Add custom styles for cards */
+.card {
+    background-color: #ececcd;
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .dark .card {
+    background-color: #333;
+    color: white;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #ada953; /* Gold for light mode */
+  }
+  
+  .dark .button {
+    background-color: #84813f; /* Darker gold for dark mode */
+  }
+  
+  /* Additional progress-related styling */
+  .status-por-rezar {
+    background-color: #f4d03f; /* Yellow for "Por rezar" */
+  }
+  
+  .status-en-curso {
+    background-color: #3498db; /* Blue for "En curso" */
+  }
+  
+  .status-completado {
+    background-color: #2ecc71; /* Green for "Completado" */
+  }
+  
+
