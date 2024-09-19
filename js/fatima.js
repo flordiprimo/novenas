@@ -169,7 +169,7 @@ const novenaFatima = [
         `, 
      },
      { // DIA 2
-        oracionDia: `¡Oh Santísima Virgen María! Madre de la divina gracia, que vestida de nívea blancura te apareciste a unos pastorcitos sencillos e inocentes, enseñándonos así cuánto debemos amar y procurar la inocencia del alma, y que pediste por medio de ellos la enmienda de las malas costumbres, y la santidad de una vida cristiana perfecta. 
+        oracionDia: `¡Oh Santísima Virgen María!, Madre de la divina gracia, que vestida de nívea blancura te apareciste a unos pastorcitos sencillos e inocentes, enseñándonos así cuánto debemos amar y procurar la inocencia del alma, y que pediste por medio de ellos la enmienda de las malas costumbres, y la santidad de una vida cristiana perfecta. 
         
         Concédenos misericordiosamente la gracia de saber apreciar con dignidad nuestra condición de cristianos, y de llevar una vida conforme a las promesas bautismales, ¡Amén!`,
         meditacion: `
@@ -196,84 +196,153 @@ const novenaFatima = [
         `, 
      },
      { // DIA 3
-        oracionDia: '¡Oh Santísima Virgen María! vaso insigne de devoción, que te apareciste en Fátima teniendo colgado de tus manos el Santo Rosario, y que insistentemente repetías: «Oren, oren mucho», para alejar por medio de la oración los males que nos amenazan. Concédenos el don y el espíritu de oración, la gracia de ser fieles en el cumplimiento del gran precepto de orar, haciéndolo todos los días, para así poder observar bien los santos mandamientos, vencer las tentaciones para poder obtener el conocimiento y un gran amor a Jesucristo en esta vida y hasta la unión feliz con Él en la eternidad. ¡Amén!',
+        oracionDia: `¡Oh Santísima Virgen María!, Vaso insigne de devoción, que te apareciste en Fátima teniendo colgado de tus manos el Santo Rosario, y que insistentemente repetías:. «Oren, oren mucho», para alejar por medio de la oración los males que nos amenazan. 
+        
+        Concédenos el don y el espíritu de oración, la gracia de ser fieles en el cumplimiento del gran precepto de orar, haciéndolo todos los días, para así poder observar bien los santos mandamientos, vencer las tentaciones, para poder obtener el conocimiento y un gran amor a Jesucristo en esta vida, y hasta la unión feliz con Él en la eternidad, ¡Amén!`,
         meditacion: `
-        La oración es un refugio esencial en tiempos de crisis y turbulencia. El Papa Francisco destaca el poder del Rosario como un medio poderoso para la paz y la conversión. En momentos difíciles, invocamos la protección de la Madre de Dios con oraciones como el ‘Sub Tuum Praesidium’, que nos invita a buscar amparo en la Virgen María y a construir comunidades de paz. Nada es imposible cuando nos dirigimos a Dios con fe, y todos podemos contribuir a la paz a través de la oración.
-        Primera Aparición, 13 de mayo de 1917
-        El 13 de mayo de 1917, en la fiesta de Nuestra Señora del Santísimo Sacramento, los tres pastorcitos, Francisco, Jacinta y Lucía, estaban pastoreando sus ovejas en la Cova de Iria, cerca de Fátima. Mientras rezaban el Rosario de manera incompleta, fueron sorprendidos por un “rayo” en un cielo despejado, que los llevó a prepararse para irse a casa. Sin embargo, una luz extraña les hizo detenerse. A medida que descendían la colina, vieron a una Señora vestida de blanco y brillante, que irradiaba una luz intensa como la de un cristal transparente bajo el sol.
-        La Virgen, con un manto blanco bordeado de oro y sosteniendo un rosario que parecía estrellado, les aseguró: “¡No tengan miedo! ¡Yo no le voy a hacer daño!” Esta presencia, aunque majestuosa, llenaba a los niños de una profunda paz y alegría. La Virgen les pidió que regresaran el 13 de cada mes durante seis meses, prometiendo revelar quién era y lo que quería en una futura aparición, y les dijo: “Vine a pedirles que vengan aquí, a esta misma hora, los días 13 de cada mes durante 6 meses seguidos.”
-        En la conversación, la Virgen también respondió a las preguntas de los niños sobre el destino de sus amigos y familiares, diciendo: “Sí, tu irás al cielo.” A Francisco le dijo: “También, pero primero tiene que rezar muchos Rosarios.” Les instó a ofrecerse a Dios para soportar sufrimientos como acto de reparación por los pecados y en súplica por la conversión de los pecadores, afirmando: “Tendrán, pues, que sufrir mucho, pero la gracia de Dios será su consuelo y los fortalecerá.”
-        La Virgen también les instruyó a rezar el Rosario diariamente para alcanzar la paz mundial y el fin de la guerra: “Recen el Rosario todos los días, para alcanzar la paz en el mundo y el fin de la guerra.” Mientras ascendía lentamente hacia el este y se desvanecía en la distancia, los niños quedaron profundamente conmovidos por la experiencia, sintiendo la presencia de Dios de una manera nueva y extraordinaria. La visión de la Virgen, rodeada de una luz celestial, dejó una impresión duradera en sus corazones y en sus vidas, preparándolos para las futuras apariciones y desafíos.
+        La oración es un refugio esencial en tiempos de crisis y turbulencia. El Papa Francisco destaca el poder del Rosario, como un medio poderoso para la paz y la conversión. En momentos difíciles, invocamos la protección de la Madre de Dios con oraciones como el ‘Sub Tuum Praesidium’, que nos invita a buscar amparo en la Virgen María, y a construir comunidades de paz. 
+        
+        Nada es imposible cuando nos dirigimos a Dios con fe, y todos podemos contribuir a la paz a través de la oración.
+        
+        Primera Aparición, 13 de mayo de 1917.
+        
+        El 13 de mayo de 1917, en la fiesta de Nuestra Señora del Santísimo Sacramento, los tres pastorcitos, Francisco, Jacinta y Lucía, estaban pastoreando sus ovejas en la Cova de Iria, cerca de Fátima. 
+        
+        Mientras rezaban el Rosario de manera incompleta, fueron sorprendidos por un “rayo” en un cielo despejado, que los llevó a prepararse para irse a casa. Sin embargo, una luz extraña les hizo detenerse. A medida que descendían la colina, vieron a una Señora vestida de blanco y brillante, que irradiaba una luz intensa, como la de un cristal transparente bajo el sol.
+
+        La Virgen, con un manto blanco bordeado de oro, y sosteniendo un rosario que parecía estrellado, les aseguró: “¡No tengan miedo! ¡Yo no les voy a hacer daño!”.
+        
+        Esta presencia, aunque majestuosa, llenaba a los niños de una profunda paz y alegría. La Virgen les pidió que regresaran el 13 de cada mes, durante seis meses, prometiendo revelar quién era, y lo que quería en una futura aparición, y les dijo: “Vine a pedirles que vengan aquí, a esta misma hora, los días 13 de cada mes durante 6 meses seguidos.”
+
+        En la conversación, la Virgen también respondió a las preguntas de los niños sobre el destino de sus amigos, y familiares, diciendo: “Sí, tu irás al cielo.” A Francisco le dijo: “También, pero primero tienes que rezar muchos Rosarios.” 
+        
+        Les instó a ofrecerse a Dios para soportar sufrimientos como acto de reparación por los pecados, y en súplica por la conversión de los pecadores, afirmando:. “Tendrán, pues, que sufrir mucho, pero la gracia de Dios será su consuelo, y los fortalecerá.”
+        
+        La Virgen también les instruyó a rezar el Rosario diariamente, para alcanzar la paz mundial y el fin de la guerra:. “Recen el Rosario todos los días, para alcanzar la paz en el mundo y el fin de la guerra.”
+         
+        Mientras ascendía lentamente hacia el este, y se desvanecía en la distancia, los niños quedaron profundamente conmovidos por la experiencia, sintiendo la presencia de Dios de una manera nueva, y extraordinaria. La visión de la Virgen, rodeada de una luz celestial, dejó una impresión duradera en sus corazones y en sus vidas, preparándolos para las futuras apariciones y desafíos.
         `, 
      },
      { // DIA 4
-        oracionDia: '¡Oh Santísima Virgen María, Reina de la Iglesia! que exhortaste a los pastorcitos de Fátima a rogar por el Papa, e infundiste en sus sencillas almas una gran veneración y amor hacia él, como Vicario de tu Hijo y su representante en la tierra. Infunde también a nosotros el espíritu de veneración y docilidad hacia la autoridad del Romano Pontífice, de adhesión inquebrantable a sus enseñanzas, y en él y con él un gran amor y respeto a todos los ministros de la Santa Iglesia, por medio de los cuales participamos la vida de la gracia de los sacramentos. ¡Amén!',
+        oracionDia: `¡Oh Santísima Virgen María, Reina de la Iglesia!, Que exhortaste a los pastorcitos de Fátima a rogar por el Papa, e infundiste en sus sencillas almas una gran veneración y amor hacia él, como Vicario de tu Hijo y su representante en la tierra. 
+        
+        Infunde también a nosotros el espíritu de veneración, y docilidad hacia la autoridad del Romano Pontífice, de adhesión inquebrantable a sus enseñanzas, y en él y con él un gran amor y respeto a todos los ministros de la Santa Iglesia, por medio de los cuales participamos la vida de la gracia de los sacramentos, ¡Amén!`,
         meditacion: `
-        En el cuarto día de la novena, nos adentramos en la profunda devoción y valentía de los tres pastorcitos de Fátima. La Santísima Virgen confió a los niños un secreto sagrado, no para enriquecerse, sino para que conocieran y amaran la devoción a su Inmaculado Corazón. Este Corazón, rodeado de espinas, simbolizaba los agravios de la humanidad. Francisco y Jacinta, a pesar de su corta edad, vivieron y testimoniaron su fe con admirable fortaleza, a pesar de enfrentar oposición, amenazas y castigos severos. Su fe inquebrantable y sus sacrificios, como rezar y ayunar, reflejan un heroísmo cristiano profundo. A pesar de ser encarcelados y amenazados con torturas por su fe, los niños nunca cedieron, manteniéndose firmes en su devoción a la “Señora” hasta el final de sus vidas.
-        Segunda Aparición, 13 de junio de 1917
-        En la segunda aparición de la Virgen María, el 13 de junio de 1917, justo después de rezar el Santo Rosario, la Virgen se apareció a los tres pastorcitos en un lugar que ya había atraído a más de 50 personas. Durante esta visita, se estableció la devoción al Inmaculado Corazón de María. La Virgen instruyó a los niños a rezar el Rosario diariamente y a aprender a leer: “Quiero que vengan aquí el día 13 del próximo mes, que recen el Rosario todos los días y que aprendan a leer.”
-        Lucía, preocupada por la curación de una persona enferma, recibió la respuesta: “Si se convierte, y se curará a lo largo del año.” Además, preguntó sobre su propio destino, deseando que los llevara al Cielo. La Virgen respondió: “Sí; a Jacinta y a Francisco me los llevaré dentro de poco, pero tú te quedarás en la tierra algún tiempo más. Jesús quiere servirse de ti para hacerme conocer y amar.” Cuando Lucía expresó su dolor por quedarse sola, la Virgen la consoló: “No, te aflijas. ¡No te desanimes! Yo nunca te abandonaré. Mi Inmaculado Corazón te servirá de refugio y a través de él irás a Dios.”
-        Durante esta aparición, la Virgen abrió sus manos y comunicó a los niños un reflejo de una luz inmensa, en la que los pastorcitos se sintieron sumergidos en Dios. Lucía observó un corazón rodeado de espinas en la palma de la mano derecha de Nuestra Señora, representando el Inmaculado Corazón de María “ultrajado por los pecados de la humanidad.” La aparición concluyó como la anterior, con la Virgen elevándose hacia el oriente y desapareciendo en la “inmensidad de los cielos.”
+        En el cuarto día de la novena, nos adentramos en la profunda devoción y valentía de los tres pastorcitos de Fátima. La Santísima Virgen confió a los niños un secreto sagrado, no para enriquecerse, sino para que conocieran, y amaran la devoción a su Inmaculado Corazón. Este Corazón, rodeado de espinas, simbolizaba los agravios de la humanidad. Francisco y Jacinta, a pesar de su corta edad, vivieron y testimoniaron su fe con admirable fortaleza, a pesar de enfrentar oposición, amenazas y castigos severos. Su fe inquebrantable y sus sacrificios, como rezar y ayunar, reflejan un heroísmo cristiano profundo. A pesar de ser encarcelados y amenazados con torturas por su fe, los niños nunca cedieron, manteniéndose firmes en su devoción a la “Señora” hasta el final de sus vidas.
+        
+        Segunda Aparición, 13 de junio de 1917.
+        
+        En la segunda aparición de la Virgen María, el 13 de junio de 1917, justo después de rezar el Santo Rosario, la Virgen se apareció a los tres pastorcitos en un lugar que ya había atraído a más de 50 personas. Durante esta visita, se estableció la devoción al Inmaculado Corazón de María. La Virgen instruyó a los niños a rezar el Rosario diariamente, y a aprender a leer: “Quiero que vengan aquí el día 13 del próximo mes, que recen el Rosario todos los días, y que aprendan a leer.”
+        
+        Lucía, preocupada por la curación de una persona enferma, recibió la respuesta: “Si se convierte, se curará a lo largo del año.” Además, preguntó sobre su propio destino, deseando que los llevara al Cielo. La Virgen respondió: “Sí; a Jacinta y a Francisco me los llevaré dentro de poco, pero tú te quedarás en la tierra algún tiempo más. Jesús quiere servirse de ti para hacerme conocer y amar.”
+        
+        Cuando Lucía expresó su dolor por quedarse sola, la Virgen la consoló: “No, te aflijas. ¡No te desanimes! Yo nunca te abandonaré. Mi Inmaculado Corazón te servirá de refugio, y a través de él irás a Dios.”
+
+        Durante esta aparición, la Virgen abrió sus manos, y comunicó a los niños un reflejo de una luz inmensa, en la que los pastorcitos se sintieron sumergidos en Dios. Lucía observó un corazón rodeado de espinas en la palma de la mano derecha de Nuestra Señora, representando el Inmaculado Corazón de María “ultrajado por los pecados de la humanidad.”
+        
+        La aparición concluyó como la anterior, con la Virgen elevándose hacia el oriente, y desapareciendo en la “inmensidad de los cielos.”
+
         Francisco, impresionado, preguntó a Lucía sobre la visión del corazón en la mano de la Virgen, quien le explicó con dolor: “Es que tú, con Jacinta, irán dentro de poco al cielo. Yo me quedaré acá en la tierra con el Corazón Inmaculado de María.”
+
         A pesar de la experiencia celestial, los niños enfrentaron muchas dificultades y malentendidos. Las familias y la comunidad local, alarmadas y escépticas, no dejaban de cuestionar los eventos. Aún así, los tres pastorcitos continuaron firmes en su fe, mostrando una valentía y devoción admirables a su corta edad.
         `, 
      },
      { // DIA 5
-        oracionDia: '¡Oh Santísima Virgen María, salud de los enfermos y consoladora de los afligidos! que movida por el ruego de los pastorcitos, obraste entonces curaciones durante tus apariciones en Fátima, y santificaste ese lugar, con tu presencia, lo convertiste en oficina de tus misericordias maternales en favor de todos los afligidos. A tu Corazón maternal acudimos llenos de filial confianza, cargando las enfermedades de nuestras almas, todas las aflicciones y dolencias de nuestra vida. Echa sobre ellas una mirada de compasión y sánalas con la ternura de tus manos, para que así podamos servirte y amarte con todo nuestro corazón y con todo nuestro ser. ¡Amén!',
+        oracionDia: `¡Oh Santísima Virgen María, salud de los enfermos y consoladora de los afligidos!, Que movida por el ruego de los pastorcitos, obraste entonces curaciones durante tus apariciones en Fátima, y santificaste ese lugar, con tu presencia, lo convertiste en oficina de tus misericordias maternales en favor de todos los afligidos. 
+        
+        A tu Corazón maternal acudimos llenos de filial confianza, cargando las enfermedades de nuestras almas, todas las aflicciones y dolencias de nuestra vida. Echa sobre ellas una mirada de compasión, y sánalas con la ternura de tus manos, para que así podamos servirte, y amarte con todo nuestro corazón y con todo nuestro ser, ¡Amén!`,
         meditacion: `
-        En el quinto día de la novena, nos sumergimos en la profunda transformación espiritual que experimentaron los tres pastorcitos después de la visión del infierno. Este revelador encuentro les llevó a tomarse la vida con una seriedad renovada. Jacinta, Francisco y Lucía intensificaron sus tiempos de oración y sacrificios, con la firme convicción de redimir las almas y obtener la paz para el mundo. La visión del infierno les inspiró a ofrecer ayunos y mortificaciones continuas, y a repetir la jaculatoria que Nuestra Señora les enseñó: “¡Oh, Jesús mío! perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia y danos la paz.”
-        Tercera Aparición, 13 de julio de 1917
-        El 13 de julio de 1917, mientras se acercaba el día de la aparición, Lucía se sentía afectada por las dudas sembradas por el párroco sobre la autenticidad de las visiones. Sin embargo, sus temores desaparecieron al llegar a Cova de Iría. La aparición de Nuestra Señora se produjo cerca de la encina, donde un gran número de personas estaban rezando el Rosario.
-        Nuestra Señora les instruyó que continuaran rezando el Rosario diariamente para obtener la paz y el fin de la guerra, prometiendo revelar su identidad y hacer un milagro visible en octubre. Durante la aparición, la Virgen comunicó a los niños que algunos recibirían curación, mientras que otros no, y les animó a ofrecer sacrificios por los pecadores.
-        Al abrir sus manos, Nuestra Señora mostró a los niños una visión aterradora del infierno, donde las almas perdidas sufrían en un mar de fuego. Este estremecedor espectáculo reveló la realidad de la condenación eterna y la necesidad urgente de redimir las almas.
-        La Virgen advirtió sobre el castigo divino que podría venir si la humanidad no se arrepentía, pidiendo la consagración de Rusia a su Inmaculado Corazón y la práctica de los primeros Sábados de cada mes en reparación por los pecados del mundo. También mostró una visión profética del Santo Padre y la persecución futura de la Iglesia, subrayando la importancia de la penitencia y el sacrificio para evitar estos males.
-        Nuestra Señora concluyó la aparición diciendo que no había más peticiones para ese día y ascendió al cielo, dejando a los niños con una renovada convicción y un profundo sentido de misión.
+        En el quinto día de la novena, nos sumergimos en la profunda transformación espiritual que experimentaron los tres pastorcitos después de la visión del infierno. Este revelador encuentro, les llevó a tomarse la vida con una seriedad renovada. Jacinta, Francisco y Lucía intensificaron sus tiempos de oración y sacrificios, con la firme convicción de redimir las almas, y obtener la paz para el mundo. La visión del infierno les inspiró a ofrecer ayunos y mortificaciones continuas, y a repetir la jaculatoria que Nuestra Señora les enseñó:. “¡Oh, Jesús mío! perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia, y danos la paz.”
+        
+        Tercera Aparición, 13 de julio de 1917.
+        
+        El 13 de julio de 1917, mientras se acercaba el día de la aparición, Lucía se sentía afectada por las dudas sembradas por el párroco sobre la autenticidad de las visiones. Sin embargo, sus temores desaparecieron al llegar a Cova de Iría.
+        
+        La aparición de Nuestra Señora se produjo cerca de la encina, donde un gran número de personas estaban rezando el Rosario.
+        
+        Nuestra Señora les instruyó que continuaran rezando el Rosario diariamente, para obtener la paz y el fin de la guerra, prometiendo revelar su identidad, y hacer un milagro visible en octubre. Durante la aparición, la Virgen comunicó a los niños que algunos recibirían curación, mientras que otros no, y les animó a ofrecer sacrificios por los pecadores.
+
+        Al abrir sus manos, Nuestra Señora mostró a los niños una visión aterradora del infierno, donde las almas perdidas sufrían en un mar de fuego. Este estremecedor espectáculo reveló la realidad de la condenación eterna, y la necesidad urgente de redimir las almas.
+
+        La Virgen advirtió sobre el castigo divino que podría venir si la humanidad no se arrepentía, pidiendo la consagración de Rusia a su Inmaculado Corazón, y la práctica de los primeros sábados de cada mes en reparación por los pecados del mundo. También mostró una visión profética del Santo Padre, y la persecución futura de la Iglesia, subrayando la importancia de la penitencia y el sacrificio, para evitar estos males.
+        
+        Nuestra Señora concluyó la aparición diciendo que no había más peticiones para ese día, y ascendió al cielo, dejando a los niños con una renovada convicción, y un profundo sentido de misión.
+        
         A pesar de las pruebas y la presión para revelar el secreto, los tres pastorcitos se mantuvieron firmes en su fe y dedicación, enfrentando con valentía las adversidades y el escepticismo de su entorno.
         `, 
      },
      { // DIA 6
-        oracionDia: '¡Oh Santísima Virgen María, refugio de los pecadores! que enseñaste a los pastorcitos de Fátima a rogar incesantemente al Señor para que las almas descarriadas no caigan en las penas eternas del infierno. Tú que manifestaste a uno de los tres que los pecados de la carne son los que más almas arrastran a aquellas terribles llamas. Infunde en nuestras almas un gran miedo al pecado y un santo temor reverencial a la justicia divina, y al mismo tiempo compasión por los pobres pecadores y un santo celo al consagrar nuestros esfuerzos con oraciones, ejemplos y palabras por su conversión. ¡Amén!',
+        oracionDia: `¡Oh Santísima Virgen María, refugio de los pecadores!, Que enseñaste a los pastorcitos de Fátima a rogar incesantemente al Señor para que las almas descarriadas no caigan en las penas eternas del infierno. Tú, que manifestaste a uno de los tres que los pecados de la carne son los que más almas arrastran a aquellas terribles llamas.
+        
+        Infunde en nuestras almas un gran miedo al pecado, y un santo temor reverencial a la justicia divina, y al mismo tiempo, compasión por los pobres pecadores, y un santo celo al consagrar nuestros esfuerzos con oraciones, ejemplos y palabras por su conversión, ¡Amén!`,
         meditacion: `
-        En el sexto día de la novena, contemplamos el sufrimiento y la perseverancia de los tres pastorcitos de Fátima en medio de la adversidad. Tal como los profetas enfrentaron desafíos y persecuciones, los niños también soportaron sufrimientos y pruebas a lo largo de su misión. Acusados de fraude y codicia, y temidos incluso por sus propias familias, los pastorcitos fueron sometidos a rigurosos interrogatorios y encarcelamientos. Sin embargo, su fe inquebrantable y su dedicación a la misión les permitieron actuar como verdaderos misioneros, enseñando el Rosario y dando ejemplo de resignación.
-        Cuarta Aparición, 13 de agosto de 1917
-        El 13 de agosto de 1917, un intento de captura por parte de Arturo Santos, un apóstata católico, llevó a los niños a ser separados de sus familias y llevados a Vila Nova de Ourem, donde fueron sometidos a presiones y amenazas. A pesar de los intentos de soborno y tortura, Francisco y Jacinta mantuvieron su fe inquebrantable. Francisco, con una paz radiante, expresó su disposición a enfrentar el martirio si fuera necesario: “¡Si nos matan, como dicen, dentro de poco estaremos en el Cielo! ¡Qué bueno! Por eso no me importan nada sus amenazas.”
-        En Cova de Iría, a pesar de la ausencia de los pastorcitos, los signos de la aparición se hicieron visibles para la multitud que seguía creciendo. La ausencia de los niños y las trampas del gobierno no impidieron que los fieles presenciaran algunos signos característicos de las apariciones.
-        El 15 de agosto, fiesta de la Asunción, los pastorcitos fueron devueltos a Fátima por el alcalde. Aunque la intervención de las autoridades parecía ser un esfuerzo serio por parte del gobierno, los planes de Nuestra Señora no fueron detenidos por mucho tiempo. El 19 de agosto, en Valinhos, Lucía y Francisco, junto con el hermano de Lucía, Juan, se encontraron con la aparición de la Virgen. Nuestra Señora les instruyó que regresaran a Cova de Iría el 13 del próximo mes y continuaran rezando el Rosario diariamente.
-        Nuestra Señora les pidió que prepararan dos andas para la fiesta de Nuestra Señora del Rosario, y que el excedente de las ofrendas se destinara a la construcción de la capilla. También se les prometió la curación de algunos enfermos y se les instó a rezar y ofrecer sacrificios por las almas perdidas. La aparición se desvaneció, dejando a los niños con la firme misión de continuar con su devoción y sacrificio por las almas en peligro.
+        En el sexto día de la novena, contemplamos el sufrimiento y la perseverancia de los tres pastorcitos de Fátima en medio de la adversidad. Tal como los profetas enfrentaron desafíos y persecuciones, los niños también soportaron sufrimientos y pruebas a lo largo de su misión. Acusados de fraude y codicia, y temidos incluso por sus propias familias, los pastorcitos fueron sometidos a rigurosos interrogatorios y encarcelamientos. Sin embargo, su fe inquebrantable y su dedicación a la misión les permitieron actuar como verdaderos misioneros, enseñando el Rosario, y dando ejemplo de resignación.
+        
+        Cuarta Aparición, 13 de agosto de 1917.
+        
+        El 13 de agosto de 1917, un intento de captura por parte de Arturo Santos, un apóstata católico, llevó a los niños a ser separados de sus familias, y llevados a Vila Nova de Ourem, donde fueron sometidos a presiones y amenazas.
+        
+        A pesar de los intentos de soborno y tortura, Francisco y Jacinta mantuvieron su fe inquebrantable. Francisco, con una paz radiante, expresó su disposición a enfrentar el martirio si fuera necesario:. “¡Si nos matan, como dicen, dentro de poco estaremos en el Cielo!. ¡Qué bueno!. Por eso no me importan nada sus amenazas.”
+
+        En Cova de Iría, a pesar de la ausencia de los pastorcitos, los signos de la aparición se hicieron visibles para la multitud que seguía creciendo. La ausencia de los niños, y las trampas del gobierno no impidieron que los fieles presenciaran algunos signos característicos de las apariciones.
+
+        El 15 de agosto, fiesta de la Asunción, los pastorcitos fueron devueltos a Fátima por el alcalde. Aunque la intervención de las autoridades parecía ser un esfuerzo serio por parte del gobierno, los planes de Nuestra Señora no fueron detenidos por mucho tiempo. El 19 de agosto, en Valinhos, Lucía y Francisco, junto con el hermano de Lucía, Juan, se encontraron con la aparición de la Virgen. 
+        
+        Nuestra Señora les instruyó que regresaran a Cova de Iría el 13 del próximo mes, y continuaran rezando el Rosario diariamente.
+
+        Nuestra Señora les pidió que prepararan dos andas para la fiesta de Nuestra Señora del Rosario, y que el excedente de las ofrendas se destinara a la construcción de la capilla. También se les prometió la curación de algunos enfermos, y se les instó a rezar y ofrecer sacrificios por las almas perdidas. La aparición se desvaneció, dejando a los niños con la firme misión de continuar con su devoción y sacrificio por las almas en peligro.
         `, 
      },
      { // DIA 7
-        oracionDia: '¡Oh Santísima Virgen María, Reina del purgatorio! tú que enseñaste a los pastorcitos de Fátima a rogar a Dios por las almas del purgatorio, especialmente por las más abandonadas. Encomendamos a la inagotable ternura de tu Corazón maternal, a todas las almas que padecen en aquel lugar de purificación, en particular las de todos aquellos nuestros allegados y familiares y a aquellas que son las más abandonadas y necesitadas; ofréceles alivio en sus penas y llévalas pronto a la región de la luz y de la paz, para cantar allí perpetuamente tus misericordias. ¡Amén!',
+        oracionDia: `¡Oh Santísima Virgen María, Reina del purgatorio!, Tú que enseñaste a los pastorcitos de Fátima a rogar a Dios por las almas del purgatorio, especialmente por las más abandonadas. 
+        
+        Encomendamos a la inagotable ternura de tu Corazón maternal, a todas las almas que padecen en aquel lugar de purificación, en particular las de todos aquellos nuestros allegados y familiares, y a aquellas que son las más abandonadas y necesitadas; ofréceles alivio en sus penas, y llévalas pronto a la región de la luz y de la paz, para cantar allí perpetuamente tus misericordias, ¡Amén!`,
         meditacion: `
-        En el séptimo día de nuestra novena, reflexionamos sobre la creciente fama de las apariciones y la multitudinaria asistencia en el 13 de septiembre de 1917. La devoción y la desesperación de las personas que acudían a los pastorcitos de Fátima se hacía evidente a medida que intentaban acercarse a ellos para pedir intercesiones por sus problemas y necesidades. La multitud, que alcanzaba los 30,000 personas, se esforzaba por ver y hablar con los niños, mostrando la miseria y las necesidades humanas de manera conmovedora.
-        Quinta Aparición, 13 de septiembre de 1917
-        Al llegar a Cova de Iría, los pastorcitos comenzaron a rezar el Rosario con la multitud. Los niños, al ver la luz característica, cayeron de rodillas, y Lucía escuchó a Nuestra Señora preguntarle:
-        “¿Qué quieres de mí?”
-        Nuestra Señora respondió: “Continúen rezando el Rosario para lograr el fin de la guerra. En octubre vendrá Nuestro Señor, Nuestra Señora de los Dolores y Nuestra Señora del Carmen, San José aparecerá con el Niño Jesús para bendecir al Mundo. Dios está contento con sus sacrificios, pero no quiere que duerman con la cuerda puesta; llévenla solo durante el día.”
-        A pesar de los sacrificios físicos y las múltiples adversidades que enfrentaban, como la curiosidad malsana, las persecuciones, y las torturas, los pastorcitos continuaron su misión con gran determinación. La Virgen les instruyó que las peticiones y oraciones de la gente serían escuchadas, aunque algunos enfermos no serían curados debido a la falta de fe o por razones divinas que superaban nuestra comprensión.
+        En el séptimo día de nuestra novena, reflexionamos sobre la creciente fama de las apariciones, y la multitudinaria asistencia en el 13 de septiembre de 1917. La devoción y la desesperación de las personas que acudían a los pastorcitos de Fátima se hacía evidente a medida que intentaban acercarse a ellos para pedir intercesiones por sus problemas y necesidades. La multitud, que alcanzaba los 30,000 personas, se esforzaba por ver y hablar con los niños, mostrando la miseria y las necesidades humanas de manera conmovedora.
+
+        Quinta Aparición, 13 de septiembre de 1917.
+
+        Al llegar a Cova de Iría, los pastorcitos comenzaron a rezar el Rosario con la multitud. Los niños, al ver la luz característica, cayeron de rodillas, y Lucía preguntó a Nuestra Señora:.“¿Qué quieres de mí?”
+
+        Nuestra Señora respondió:. “Continúen rezando el Rosario para lograr el fin de la guerra. En octubre vendrá Nuestro Señor, Nuestra Señora de los Dolores, y Nuestra Señora del Carmen, San José aparecerá con el Niño Jesús para bendecir al Mundo. Dios está contento con sus sacrificios, pero no quiere que duerman con la cuerda puesta; llévenla solo durante el día.”
+
+        A pesar de los sacrificios físicos, y las múltiples adversidades que enfrentaban, como la curiosidad malsana, las persecuciones, y las torturas, los pastorcitos continuaron su misión con gran determinación. La Virgen les instruyó que las peticiones y oraciones de la gente serían escuchadas, aunque algunos enfermos no serían curados debido a la falta de fe o por razones divinas que superaban nuestra comprensión.
+
         Sobre la construcción de la capilla, Nuestra Señora indicó que se debía construir una pequeña capilla en honor a Nuestra Señora del Rosario, pero que solo se usara la mitad del dinero recolectado para ello, reservando la otra mitad para las andas.
-        Finalmente, ante la solicitud de un milagro para probar su autenticidad, Nuestra Señora prometió que en octubre realizaría un gran milagro para que todos creyeran. La aparición se desvaneció como antes, y Lucía, señalando a la Señora, invitó a la multitud a mirar.
+
+        Finalmente, ante la solicitud de un milagro para probar su autenticidad, Nuestra Señora prometió que en octubre realizaría un gran milagro, para que todos creyeran. La aparición se desvaneció como antes, y Lucía, señalando a la Señora, invitó a la multitud a mirar.
         `, 
      },
      { // DIA 8
-        oracionDia: '¡Oh Santísima Virgen María! que en tu última aparición te diste a conocer como la Reina del Santísimo Rosario, y en todas ellas recomendaste el rezo de esta devoción como el remedio más seguro y eficaz para todos los males y calamidades que nos afligen, tanto del alma como del cuerpo. Infunde en nuestras almas una profunda estima de los misterios de nuestra Redención que meditamos a través del Rosario, para así obtener sus bendiciones eternas. Concédenos la gracia de ser siempre fieles a su rezo diario y así honrarte al meditar tus gozos, tus dolores y tus glorias. Además de hacernos merecedores de tu protección maternal y de tu asistencia en todos los momentos de la vida, pero especialmente en la hora de la muerte. ¡Amén!',
+        oracionDia: `¡Oh Santísima Virgen María!, Que en tu última aparición te diste a conocer como la Reina del Santísimo Rosario, y en todas ellas recomendaste el rezo de esta devoción como el remedio más seguro y eficaz para todos los males y calamidades que nos afligen, tanto del alma como del cuerpo. 
+        
+        Infunde en nuestras almas una profunda estima de los misterios de nuestra Redención, que meditamos a través del Rosario, para así obtener sus bendiciones eternas. Concédenos la gracia de ser siempre fieles a su rezo diario, y así honrarte al meditar tus gozos, tus dolores, y tus glorias. Además de hacernos merecedores de tu protección maternal y de tu asistencia en todos los momentos de la vida, pero especialmente en la hora de la muerte, ¡Amén!`,
         meditacion: `
-        En el octavo día de nuestra novena, reflexionamos sobre la última aparición en Fátima y el extraordinario "Milagro del Sol" que marcó este evento memorable. El 13 de octubre de 1917, la gran multitud que se reunió en Cova de Iría estaba deseosa de presenciar la señal prometida por la Virgen. Para los tres pastorcitos, Lucía, Francisco y Jacinta, este último encuentro se convirtió en una profunda experiencia espiritual y un llamado a vivir una vida de bendición y sacrificio.
-        Sexta (última) aparición, 13 de octubre de 1917
-        Durante la noche del 12 al 13 de octubre, la lluvia no cesó, empapando el suelo y a los miles de peregrinos que viajaban hacia Fátima desde diversos lugares y en diferentes medios de transporte. A pesar de las inclemencias del tiempo, la multitud continuó su camino hacia Cova de Iría, donde estaba la capilla original y la moderna capilla de vidrio en la actualidad.
-        A pesar de las dificultades y el escepticismo que rodeaban a los pastorcitos, finalmente lograron llegar a Cova de Iría. Allí, en medio de la multitud y las críticas, la Virgen se apareció alrededor de las 2:00 p.m., como había sido anunciado. La Señora les dijo:
-        “Quiero que construyan una capilla aquí en mi honor. Quiero que continúen rezando el Rosario todos los días. La guerra pronto terminará y los soldados regresarán a sus hogares.”
-        Cuando se le pidió que revelara su nombre, respondió:
-        “Yo soy la Señora del Rosario.”
+        En el octavo día de nuestra novena, reflexionamos sobre la última aparición en Fátima, y el extraordinario "Milagro del Sol" que marcó este evento memorable. El 13 de octubre de 1917, la gran multitud que se reunió en Cova de Iría, estaba deseosa de presenciar la señal prometida por la Virgen. Para los tres pastorcitos, Lucía, Francisco y Jacinta, este último encuentro se convirtió en una profunda experiencia espiritual, y un llamado a vivir una vida de bendición y sacrificio.
+
+        Sexta, y última, aparición, 13 de octubre de 1917.
+
+        Durante la noche del 12 al 13 de octubre, la lluvia no cesó, empapando el suelo y a los miles de peregrinos que viajaban hacia Fátima desde diversos lugares, y en diferentes medios de transporte. A pesar de las inclemencias del tiempo, la multitud continuó su camino hacia Cova de Iría, donde estaba la capilla original y la moderna capilla de vidrio en la actualidad.
+
+        A pesar de las dificultades y el escepticismo que rodeaban a los pastorcitos, finalmente lograron llegar a Cova de Iría. Allí, en medio de la multitud y las críticas, la Virgen se apareció alrededor de las 2 de la tarde, como había sido anunciado. La Señora les dijo:. “Quiero que construyan una capilla aquí en mi honor. Quiero que continúen rezando el Rosario todos los días. La guerra pronto terminará, y los soldados regresarán a sus hogares.”
+
+        Cuando se le pidió que revelara su nombre, respondió:. “Yo soy la Señora del Rosario.”
+
         También respondió a las peticiones de la gente, prometiendo que algunas serían concedidas, pero advirtiendo que la conversión y el arrepentimiento eran necesarios para recibir la gracia. La Virgen expresó una tristeza profunda, pidiendo que no se ofendiera más a Dios, y advirtió sobre el fin del mundo si el pueblo no se enmendaba.
-        Al elevarse hacia el cielo, la Señora hizo que sus manos reflejaran la luz del sol, creando un fenómeno impresionante. Mientras la lluvia cesaba, el sol comenzó a moverse de manera extraordinaria, creando diversos efectos visuales que fueron testigos de la multitud de aproximadamente 70,000 personas. Los testimonios describen el sol como un disco de colores brillantes que no dañaba la vista, girando y danzando en el cielo.
-        El "Milagro del Sol"
-        Los testimonios sobre el fenómeno solar varían, pero todos coinciden en que el sol parecía moverse de manera inexplicable y fascinante, proyectando colores y efectos que dejaban a todos asombrados. Este milagro fue presenciado por la multitud y se convirtió en un evento inolvidable que corroboró la autenticidad de las apariciones.
+
+        Al elevarse hacia el cielo, la Señora hizo que sus manos reflejaran la luz del sol, creando un fenómeno impresionante. Mientras la lluvia cesaba, el sol comenzó a moverse de manera extraordinaria, creando diversos efectos visuales del que fueron testigos la multitud de aproximadamente 70,000 personas. Los testimonios describen el sol como un disco de colores brillantes que no dañaba la vista, girando y danzando en el cielo.
+        
+        El "Milagro del Sol".
+
+        Los testimonios sobre el fenómeno solar varían, pero todos coinciden en que el sol parecía moverse de manera inexplicable y fascinante, proyectando colores y efectos que dejaban a todos asombrados. Este milagro fue presenciado por la multitud, y se convirtió en un evento inolvidable que corroboró la autenticidad de las apariciones.
+
         Para Jacinta y Francisco, esta fue su última aparición, mientras que Lucía continuó recibiendo visitas de la Virgen. En 1920, antes de dejar Fátima para entrar en un internado, Lucía fue nuevamente fortalecida por la Virgen en su decisión de dedicarse completamente a Dios.
         `, 
      },
      { // DIA 9
-        oracionDia: `¡Oh Santísima Virgen María, Madre nuestra dulcísima!, que escogiste a los pastorcitos de Fátima para mostrar al mundo las ternuras de tu Corazón misericordioso, y les propusiste la devoción al mismo como el medio con el cual Dios quiere dar la paz al mundo, como el camino para llevar las almas a Dios, y como una prenda suprema de salvación. Permite, ¡oh, Corazón de la más tierna de las madres!, que sepamos comprender tu mensaje de amor y de misericordia, que lo abracemos con filial adhesión, y que lo practiquemos siempre con fervor; y que tu Corazón sea nuestro refugio, nuestro consuelo y el camino que nos conduzca al amor, y a la unión con tu adorado Hijo Jesús, ¡Amén!
+        oracionDia: `¡Oh Santísima Virgen María, Madre nuestra dulcísima!, Que escogiste a los pastorcitos de Fátima para mostrar al mundo las ternuras de tu Corazón misericordioso, y les propusiste la devoción al mismo como el medio con el cual Dios quiere dar la paz al mundo, como el camino para llevar las almas a Dios, y como una prenda suprema de salvación.
+        
+        Permite, ¡oh, Corazón de la más tierna de las madres!, que sepamos comprender tu mensaje de amor y de misericordia, que lo abracemos con filial adhesión, y que lo practiquemos siempre con fervor; y que tu Corazón sea nuestro refugio, nuestro consuelo y el camino que nos conduzca al amor, y a la unión con tu adorado Hijo Jesús, ¡Amén!.
         `,
         meditacion: `
         En el noveno día, reflexionamos sobre la vida de Lucía, Francisco y Jacinta, los pastorcitos de Fátima. Una historia de gracia y misericordia. 
@@ -473,7 +542,77 @@ if (meddiadosContainer != null){
 let meddiadostexto = novenaFatima[2].meditacion
 meddiadosContainer.innerText = meddiadostexto}
 
-// DEJO LUGAR PARA LOS CONTENIDOS DE LOS OTROS DIAS
+//CONTENIDO DIA 3
+
+let ordiatresContainer = document.getElementById("oracion_diatres_oracion")
+if (ordiatresContainer != null){
+let ordiatrestexto = novenaFatima[3].oracionDia
+ordiatresContainer.innerText = ordiatrestexto}
+
+let meddiatresContainer = document.getElementById("meditacion_diatres_oracion")
+if (meddiatresContainer != null){
+let meddiatrestexto = novenaFatima[3].meditacion
+meddiatresContainer.innerText = meddiatrestexto}
+
+//CONTENIDO DIA 4
+
+let ordiacuatroContainer = document.getElementById("oracion_diacuatro_oracion")
+if (ordiacuatroContainer != null){
+let ordiacuatrotexto = novenaFatima[4].oracionDia
+ordiacuatroContainer.innerText = ordiacuatrotexto}
+
+let meddiacuatroContainer = document.getElementById("meditacion_diacuatro_oracion")
+if (meddiacuatroContainer != null){
+let meddiacuatrotexto = novenaFatima[4].meditacion
+meddiacuatroContainer.innerText = meddiacuatrotexto}
+
+//CONTENIDO DIA 5
+
+let ordiacincoContainer = document.getElementById("oracion_diacinco_oracion")
+if (ordiacincoContainer != null){
+let ordiacincotexto = novenaFatima[5].oracionDia
+ordiacincoContainer.innerText = ordiacincotexto}
+
+let meddiacincoContainer = document.getElementById("meditacion_diacinco_oracion")
+if (meddiacincoContainer != null){
+let meddiacincotexto = novenaFatima[5].meditacion
+meddiacincoContainer.innerText = meddiacincotexto}
+
+//CONTENIDO DIA 6
+
+let ordiaseisContainer = document.getElementById("oracion_diaseis_oracion")
+if (ordiaseisContainer != null){
+let ordiaseistexto = novenaFatima[6].oracionDia
+ordiaseisContainer.innerText = ordiaseistexto}
+
+let meddiaseisContainer = document.getElementById("meditacion_diaseis_oracion")
+if (meddiaseisContainer != null){
+let meddiaseistexto = novenaFatima[6].meditacion
+meddiaseisContainer.innerText = meddiaseistexto}
+
+//CONTENIDO DIA 7
+
+let ordiasieteContainer = document.getElementById("oracion_diasiete_oracion")
+if (ordiasieteContainer != null){
+let ordiasietetexto = novenaFatima[7].oracionDia
+ordiasieteContainer.innerText = ordiasietetexto}
+
+let meddiasieteContainer = document.getElementById("meditacion_diasiete_oracion")
+if (meddiasieteContainer != null){
+let meddiasietetexto = novenaFatima[7].meditacion
+meddiasieteContainer.innerText = meddiasietetexto}
+
+//CONTENIDO DIA 8
+
+let ordiaochoContainer = document.getElementById("oracion_diaocho_oracion")
+if (ordiaochoContainer != null){
+let ordiaochotexto = novenaFatima[8].oracionDia
+ordiaochoContainer.innerText = ordiaochotexto}
+
+let meddiaochoContainer = document.getElementById("meditacion_diaocho_oracion")
+if (meddiaochoContainer != null){
+let meddiaochotexto = novenaFatima[8].meditacion
+meddiaochoContainer.innerText = meddiaochotexto}
 
 //CONTENIDO DIA 9
 
