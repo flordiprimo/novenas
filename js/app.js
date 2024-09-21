@@ -152,7 +152,7 @@ const calculateDaysUntil = (startDay, elementId, novenaName) => {
             <p><strong>Novena en curso</strong> - Día ${dayDifferenceFromStart} de la novena</p>
         `;
         cardElement.insertAdjacentHTML('beforeend', `
-            <a href=${dayLink}><button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg">Ir al día ${dayDifferenceFromStart}</button></a>
+            <a href=${dayLink}><button class="mt-4 px-4 py-2 bg-green-800 text-white rounded-lg">Ir al día ${dayDifferenceFromStart}</button></a>
             <a href=${novLink}><button class="mt-4 px-4 py-2 bg-yellow-600 text-white rounded-lg">Ver Novena</button></a>
         `);
     } else {

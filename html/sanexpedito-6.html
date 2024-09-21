@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novena San Expedito - Dia 6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="light-mode font-serif">
+    <!-- Nav Bar -->
+    <nav class="fixed w-full flex justify-between p-4 light-mode">
+        <div class="text-2xl font-bold">Mis Novenas</div>
+        <div class="flex items-center space-x-4">
+            <!-- Light/Dark Mode Toggle -->
+            <button id="toggleTheme" class="text-2xl focus:outline-none"><i class="bi bi-sun"></i></button>
+            <!-- Hamburguesa -->
+            <button id="menuToggle" class="text-2xl focus:outline-none">☰</button>
+        </div>
+    </nav>
+
+    <!-- Off-canvas Menu -->
+    <div id="sideMenu" class="z-50 fixed top-16 right-0 h-full w-64 transform translate-x-full transition-transform light-mode">
+        <ul class="p-4 space-y-4">
+            <li><a href="../index.html" class="block">Home</a></li>
+            <li><a href="fatima-home.html" class="block">Novena: Fátima</a></li>
+            <ul>
+                <li><a href="fatima-1.html" class="block">Dia 1</a></li>
+                <li><a href="fatima-2.html" class="block">Dia 2</a></li>
+                <li><a href="fatima-3.html" class="block">Dia 3</a></li>
+                <li><a href="fatima-4.html" class="block">Dia 4</a></li>
+                <li><a href="fatima-5.html" class="block">Dia 5</a></li>
+                <li><a href="fatima-6.html" class="block">Dia 6</a></li>
+                <li><a href="fatima-7.html" class="block">Dia 7</a></li>
+                <li><a href="fatima-8.html" class="block">Dia 8</a></li>
+                <li><a href="fatima-9.html" class="block">Dia 9</a></li>
+            </ul>
+            <li><a href="sanexpedito-home.html" class="block">Novena: San Expedito</a></li>
+            <ul>
+                <li><a href="sanexpedito-1.html" class="block">Dia 1</a></li>
+                <li><a href="sanexpedito-2.html" class="block">Dia 2</a></li>
+                <li><a href="sanexpedito-3.html" class="block">Dia 3</a></li>
+                <li><a href="sanexpedito-4.html" class="block">Dia 4</a></li>
+                <li><a href="sanexpedito-5.html" class="block">Dia 5</a></li>
+                <li><a href="sanexpedito-6.html" class="block">Dia 6</a></li>
+                <li><a href="sanexpedito-7.html" class="block">Dia 7</a></li>
+                <li><a href="sanexpedito-8.html" class="block">Dia 8</a></li>
+                <li><a href="sanexpedito-9.html" class="block">Dia 9</a></li>
+            </ul>
+            <li><a href="rosario-home.html" class="block">Rosario</a></li>
+        </ul>
+    </div>
+
+    <!-- Home Content -->
+    <div class="fixed top-14 container mx-auto p-4 card-lighter dark:card-dark">
+            <h2 class="font-serif text-2xl mb-2">Novena San Expedito</h2>
+            <h3 class="font-serif text-xl mb-2">Dia 6</h3>
+        <img src="../images/san-expedito.jpg" class="mb-4 rounded-xl shadow-md">
+    </div>
+    <div id="day-container" class="pt-[440px] px-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div id="int_inicial" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Intención inicial</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="int_inicial_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="invocacion" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Invocación</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="invocacion_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="padrenuestro" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Padre nuestro</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="padrenuestro_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="avemaria" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Ave María</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="avemaria_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="gloria" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Gloria</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="gloria_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="oracion_sanexpedito" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Oracion a San Expedito</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="oracion_sanexpedito_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="oracion_diaria" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Oración diaria</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="oracion_diaria_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <!--DIA 6 meditacion-->
+            <div id="meditacion_diaseis" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Meditación del día</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="meditacion_diaseis_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <!--DIA 6 lectura-->
+            <div id="lectura_diaseis" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Lectura del día</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="lectura_diaseis_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <!--DIA 6 reflexión-->
+            <div id="reflexion_diaseis" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Reflexión</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="reflexion_diaseis_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <!--DIA 6 compromiso-->
+            <div id="compromiso_diaseis" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Compromiso diario</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="compromiso_diaseis_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <!--Gozos-->
+            <div id="gozos" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Gozos</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="gozos_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="padrenuestro2" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Padre nuestro</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="padrenuestro2_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="avemaria2" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Ave María</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="avemaria2_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <div id="gloria2" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Gloria</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="gloria2_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <!--Oracion final-->
+            <div id="oracion_final" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Oración final</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="oracion_final_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <button class="next-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Siguiente</button>
+            </div>
+            <!--saludos DIA 6-->
+            <div id="saludos_diaseis" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold pb-2">Saludos</h2>
+                <button class="expand-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg">Rezar</button>
+                <button class="play-btn mt-2 px-4 py-2 bg-green-800 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <p class="m-4 hidden" id="saludos_diaseis_oracion">
+                    <!--Este contenido se genera acá -->
+                </p>
+                <a href="sanexpedito-home.html"><button class="finish-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg">Finalizar día</button></a>
+            </div>
+    </div>
+
+    <script src="../js/sanexpedito.js"></script>
+</body>
+</html>

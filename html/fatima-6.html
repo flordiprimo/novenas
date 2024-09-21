@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novena Fátima - Dia 2</title>
+    <title>Novena Fátima - Dia 6</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
@@ -22,11 +22,33 @@
     </nav>
 
     <!-- Off-canvas Menu -->
-    <div id="sideMenu" class="fixed z-50 top-0 right-0 h-full w-64 transform translate-x-full transition-transform light-mode">
+    <div id="sideMenu" class="z-50 fixed top-16 right-0 h-full w-64 transform translate-x-full transition-transform light-mode">
         <ul class="p-4 space-y-4">
             <li><a href="../index.html" class="block">Home</a></li>
-            <li><a href="fatima-home.html" class="block">Novena 1: Fátima</a></li>
-            <li><a href="sanexpedito-home.html" class="block">Novena 2: San Expedito</a></li>
+            <li><a href="fatima-home.html" class="block">Novena: Fátima</a></li>
+            <ul>
+                <li><a href="fatima-1.html" class="block">Dia 1</a></li>
+                <li><a href="fatima-2.html" class="block">Dia 2</a></li>
+                <li><a href="fatima-3.html" class="block">Dia 3</a></li>
+                <li><a href="fatima-4.html" class="block">Dia 4</a></li>
+                <li><a href="fatima-5.html" class="block">Dia 5</a></li>
+                <li><a href="fatima-6.html" class="block">Dia 6</a></li>
+                <li><a href="fatima-7.html" class="block">Dia 7</a></li>
+                <li><a href="fatima-8.html" class="block">Dia 8</a></li>
+                <li><a href="fatima-9.html" class="block">Dia 9</a></li>
+            </ul>
+            <li><a href="sanexpedito-home.html" class="block">Novena: San Expedito</a></li>
+            <ul>
+                <li><a href="sanexpedito-1.html" class="block">Dia 1</a></li>
+                <li><a href="sanexpedito-2.html" class="block">Dia 2</a></li>
+                <li><a href="sanexpedito-3.html" class="block">Dia 3</a></li>
+                <li><a href="sanexpedito-4.html" class="block">Dia 4</a></li>
+                <li><a href="sanexpedito-5.html" class="block">Dia 5</a></li>
+                <li><a href="sanexpedito-6.html" class="block">Dia 6</a></li>
+                <li><a href="sanexpedito-7.html" class="block">Dia 7</a></li>
+                <li><a href="sanexpedito-8.html" class="block">Dia 8</a></li>
+                <li><a href="sanexpedito-9.html" class="block">Dia 9</a></li>
+            </ul>
             <li><a href="rosario-home.html" class="block">Rosario</a></li>
         </ul>
     </div>
@@ -109,7 +131,9 @@
                 <p class="m-4 hidden" id="oracion_final_oracion">
                     <!--Este contenido se genera acá -->
                 </p>
-                <button class="finish-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Finalizar día</button>
+                <a href="fatima-home.html">
+                    <button class="finish-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Finalizar día</button>
+                </a>
             </div>
     </div>
 
