@@ -41,6 +41,18 @@ const getDayStatus = (day) => {
     }
 };
 
+// Función para obtener el estado del rosario desde localStorage
+const getRosarioStatus = () => {
+    let estado = localStorage.getItem('rosario')
+    if (estado == undefined){
+        updateRosarioStatus("Por rezar")
+    }else{
+        return estado
+    }
+};
+
+let estadoRosario = getRosarioStatus()
+console.log(estadoRosario)
 
 // Función para actualizar el estado del día en localStorage
 const updateDayStatus = (day, status) => {
@@ -452,6 +464,17 @@ for (let boton of botonescomplete) {
                 next_botonPlay.classList.remove('hidden')
                 next_botonNext.classList.remove('hidden')
                 next_botonRezar.classList.add('hidden')
+                next.scrollIntoView({behavior: 'smooth', // Desplazamiento suave
+                    block: 'start' // Alinea el elemento al inicio de la vista
+                    })
+                // Luego, ajusta la posición con un desplazamiento adicional
+                setTimeout(() => {
+                    window.scrollBy({
+                        top: -400, // Ajusta esta cantidad a tu necesidad
+                        behavior: 'smooth'
+                    });
+                }, 500); // Ajusta el tiempo según el comportamiento de desplazamiento
+                
             
     })
 })};
@@ -625,6 +648,29 @@ let meddianueveContainer = document.getElementById("meditacion_dianueve_oracion"
 if (meddianueveContainer != null){
 let meddianuevetexto = novenaFatima[9].meditacion
 meddianueveContainer.innerText = meddianuevetexto}
+
+// contenido rosario
+// PRIMERO VEO EL ESTADO DEL ROSARIO
+let rosarioContainers = document.getElementsByClassName('rosario')
+// despues actualizo
+for (let container of rosarioContainers){
+    if (estadoRosario !== "Por rezar"){
+        let status = container.children[1]
+        status.textContent = "Estado: " + estadoRosario
+    }
+    if (estadoRosario !== "Por rezar" && estadoRosario !== "Completo"){
+        let status = container.children[1]
+        status.textContent = "Estado: En curso"
+    }
+    if (estadoRosario === "Completo"){
+        let status = container.children[1]
+        status.textContent = "Estado: " + estadoRosario
+        let rezar = container.children[2].children[0]
+        rezar.classList.add('hidden')
+        let complete = container.children[3]
+        complete.classList.remove('hidden')
+    }
+}
 
 //TEXTO A VOZ
 // Variables para manejar el estado de la voz

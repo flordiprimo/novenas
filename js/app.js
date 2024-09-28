@@ -168,3 +168,103 @@ calculateDaysUntil(4, 'fatimaDays', 'Fátima');
 
 // Novena San Expedito (comienza el día 10)
 calculateDaysUntil(10, 'expeditoDays', 'San Expedito');
+
+
+// Función para obtener el estado del rosario desde localStorage
+const getRosarioStatus = () => {
+    let estado = localStorage.getItem('rosario')
+    if (estado == undefined){
+        updateRosarioStatus("Por rezar")
+    }else{
+        return estado
+    }
+};
+
+// funcion para resetear el estado del rosario
+const ResetRosarioStatus = () => {
+    localStorage.setItem(`rosario`, "Por rezar");
+};
+
+let botonResetRosario = document.getElementById('rosario-reset')
+
+botonResetRosario.addEventListener('click', (e) => {
+    ResetRosarioStatus()
+    location.reload()
+})
+
+
+let estadoRosario = getRosarioStatus()
+console.log(estadoRosario)
+
+// actualizar estado del rosario
+let rosarioStatus = document.getElementById('rosario-status')
+if (estadoRosario !== "Completo" && estadoRosario !== "Por rezar"){
+    rosarioStatus.textContent = "Rosario del día: En curso"
+}else{
+    rosarioStatus.textContent = "Rosario del día: " + estadoRosario
+}
+
+
+// ver si hay un dia activo de novena o no
+const buscarKeyNovena = (novena) => {
+    let array = []
+    let diaEncontrado = ""
+    // Itera sobre todos los elementos en localStorage
+    for (let i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i); // Obtiene la clave en el índice i
+      
+      // Verifica si la clave contiene la palabra 'fatima'
+      if (key.includes(novena)) {
+        let novenaName = key.split('novena')[1]
+        novenaDay = novenaName.split('Day')[1]
+        let valor = localStorage.getItem(key); 
+        let day = [novenaDay, key, valor]
+        array.push(day)
+      }
+    }
+    array.sort((a,b) => {
+        return parseInt(a[0]) - parseInt(b[0])
+    })
+    let hayEnCurso = array.some(subArray => subArray[2] === "En curso")
+    if (hayEnCurso === true){
+        let encontrado = array.find(subArray => subArray[2] === "En curso")
+    diaEncontrado = encontrado
+    return diaEncontrado
+    }else{
+    let hayCompletado = array.some(subArray => subArray[2] === "Completado")
+    if (hayCompletado === true){
+        let newArray = array.filter(subArray => subArray[2] === "Completado")
+        let mayorNumero = newArray.reduce((max, current) =>{
+            return parseInt(current[0]) > parseInt(max[0]) ? current : max
+        })
+        return mayorNumero
+    }
+    }
+
+  };
+
+  let estadoFatima = buscarKeyNovena('Fatima')
+  if (estadoFatima !== undefined){
+    let novenaDay = estadoFatima
+    estadoFatima = "Novena Día " + novenaDay[0] + ": " + novenaDay[2]
+  }else{
+    estadoFatima = ""
+  }
+
+  // contenedor estado novena San Expedito
+  let contenedorEstadoFatima = document.getElementById('estado-fatima')
+  contenedorEstadoFatima.textContent = estadoFatima
+
+  let estadoSanExpedito = buscarKeyNovena('SanExpedito')
+  if (estadoSanExpedito !== undefined){
+    let novenaDay = estadoSanExpedito
+    estadoSanExpedito = "Novena Día " + novenaDay[0] + ": " + novenaDay[2]
+  }else{
+    estadoSanExpedito = ""
+  }
+
+  // contenedor estado novena SanExpedito
+  let contenedorEstadoSanExpedito = document.getElementById('estado-sanexpedito')
+  contenedorEstadoSanExpedito.textContent = estadoSanExpedito
+
+

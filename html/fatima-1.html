@@ -27,9 +27,9 @@
             <li><a href="../index.html" class="block">Home</a></li>
             <li><a href="html/fatima-home.html" class="block">Novena: Fátima</a></li>
             <ul>
-                <li><a href="html/fatima-1.html" class="block">Dia 1</a></li>
-                <li><a href="html/fatima-2.html" class="block">Dia 2</a></li>
-                <li><a href="html/fatima-3.html" class="block">Dia 3</a></li>
+                <li><a href="fatima-1.html" class="block">Dia 1</a></li>
+                <li><a href="fatima-2.html" class="block">Dia 2</a></li>
+                <li><a href="fatima-3.html" class="block">Dia 3</a></li>
                 <li><a href="fatima-4.html" class="block">Dia 4</a></li>
                 <li><a href="fatima-5.html" class="block">Dia 5</a></li>
                 <li><a href="fatima-6.html" class="block">Dia 6</a></li>
@@ -107,11 +107,11 @@
                 <button class="next-btn mt-4 px-4 py-2 bg-yellow-600 text-white rounded-lg hidden">Siguiente</button>
             </div>
             <!--ROSARIO-->
-            <div id="rosario_diauno" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+            <div id="rosario_diauno" class="rosario p-4 rounded-lg shadow-md card-light dark:card-dark">
                 <h2 class="text-xl font-bold pb-2">Rosario diario</h2>
-                <p class="px-4"></p>
-                <a href="rosario.html"><button class="expand-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-lg">Rezar</button></a>
-                <button class="complete-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg">Ya lo recé</button>
+                <p id="rosario-status" class="px-0"></p>
+                <a href="rosario-home.html"><button class="rosario-expand expand-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-lg">Rezar</button></a>
+                <button class="rosario-complete complete-btn mt-4 px-4 py-2 bg-green-800 text-white rounded-lg hidden">Ya lo recé</button>
             </div>
             <!--DIA 1 meditacion-->
             <div id="meditacion_diauno" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
@@ -124,7 +124,7 @@
                 <button class="next-btn mt-4 px-4 py-2 bg-yellow-600 text-white rounded-lg hidden">Siguiente</button>
             </div>
             <!--Oración final-->
-            <div id="oracion_final" class="p-4 rounded-lg shadow-md card-light dark:card-dark">
+            <div id="oracion_final" class="p-4 rounded-lg shadow-md card-light dark:card-dark mb-[700px]">
                 <h2 class="text-xl font-bold pb-2">Oración final</h2>
                 <button class="expand-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-lg">Rezar</button>
                 <button class="play-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-lg hidden"><i class="bi bi-play-circle"></i> Escuchar</button>

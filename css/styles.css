@@ -20,7 +20,7 @@ body.dark-mode nav,
 body.dark-mode #sideMenu,
 body.dark-mode .card-lighter
 {
-    background-color: #2b2b2b; /* Fondo de tarjetas y menú hamburguesa en dark mode */
+    background-color: #333; /* Fondo de tarjetas y menú hamburguesa en dark mode */
     color: white;
 }
 .dark-mode .card-light {

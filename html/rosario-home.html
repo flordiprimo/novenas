@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="light-mode font-serif">
+    <!-- Nav Bar -->
+    <nav class="fixed w-full flex justify-between p-4 light-mode">
+        <div class="text-2xl font-bold">Santo Rosario</div>
+        <div class="flex items-center space-x-4">
+            <!-- Light/Dark Mode Toggle -->
+            <button id="toggleTheme" class="text-2xl focus:outline-none"><i class="bi bi-sun"></i></button>
+            <!-- Hamburguesa -->
+            <button id="menuToggle" class="text-2xl focus:outline-none">☰</button>
+        </div>
+    </nav>
+
+    <!-- Off-canvas Menu -->
+    <div id="sideMenu" class="z-50 fixed top-16 right-0 h-full w-64 transform translate-x-full transition-transform light-mode">
+        <ul class="p-4 space-y-4">
+            <li><a href="../index.html" class="block">Home</a></li>
+            <li><a href="fatima-home.html" class="block">Novena: Fátima</a></li>
+            <ul>
+                <li><a href="fatima-1.html" class="block">Dia 1</a></li>
+                <li><a href="fatima-2.html" class="block">Dia 2</a></li>
+                <li><a href="fatima-3.html" class="block">Dia 3</a></li>
+                <li><a href="fatima-4.html" class="block">Dia 4</a></li>
+                <li><a href="fatima-5.html" class="block">Dia 5</a></li>
+                <li><a href="fatima-6.html" class="block">Dia 6</a></li>
+                <li><a href="fatima-7.html" class="block">Dia 7</a></li>
+                <li><a href="fatima-8.html" class="block">Dia 8</a></li>
+                <li><a href="fatima-9.html" class="block">Dia 9</a></li>
+            </ul>
+            <li><a href="sanexpedito-home.html" class="block">Novena: San Expedito</a></li>
+            <ul>
+                <li><a href="sanexpedito-1.html" class="block">Dia 1</a></li>
+                <li><a href="sanexpedito-2.html" class="block">Dia 2</a></li>
+                <li><a href="sanexpedito-3.html" class="block">Dia 3</a></li>
+                <li><a href="sanexpedito-4.html" class="block">Dia 4</a></li>
+                <li><a href="sanexpedito-5.html" class="block">Dia 5</a></li>
+                <li><a href="sanexpedito-6.html" class="block">Dia 6</a></li>
+                <li><a href="sanexpedito-7.html" class="block">Dia 7</a></li>
+                <li><a href="sanexpedito-8.html" class="block">Dia 8</a></li>
+                <li><a href="sanexpedito-9.html" class="block">Dia 9</a></li>
+            </ul>
+            <li><a href="rosario-home.html" class="block">Rosario</a></li>
+        </ul>
+    </div>
+
+    <!-- Home Content -->
+    <div class="fixed top-12 container mx-auto p-4 card-lighter dark:card-dark">
+        <h2 class="font-serif text-2xl mb-2">Misterios <span id="misterio_type">Luminosos</span></h2>
+        <img src="../images/virgen-fatima.jpg" class="rounded-xl shadow-md">
+    </div>
+    <div id="cards-container" class="pt-[330px] grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="inicial px-4 py-3 shadow-md card-light dark:card-dark rounded-xl">
+                <h2 class="text-xl font-bold">Oraciones iniciales</h2>
+                <div id="orIniciales-container" class="container mx-auto py-2 card-light dark:card-dark">
+                    <!--Acá se generan las tarjetas con el contenido de las oraciones iniciales-->
+                </div>
+            </div>
+            <div id="misterio1" class="misterio px-4 py-3 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold mb-2">Primer misterio.<span id="misterioUno"></span></h2>
+                <div id="misterio1-container">
+                    <!--El contenido del misterio se autogenera acá según el día-->
+                </div>
+                <div class="grid grid-cols-5">
+                    <button id="avemaria-1" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">1</button>
+                    <button id="avemaria-2" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">2</button>
+                    <button id="avemaria-3" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">3</button>
+                    <button id="avemaria-4" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">4</button>
+                    <button id="avemaria-5" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">5</button>
+                    <button id="avemaria-6" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">6</button>
+                    <button id="avemaria-7" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">7</button>
+                    <button id="avemaria-8" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">8</button>
+                    <button id="avemaria-9" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">9</button>
+                    <button id="avemaria-10" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">10</button>  
+                </div>
+                <button class="play-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-full hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <div id="misterio1-oraciones-container" class="avemarias container mx-auto py-2 card-light dark:card-dark">
+                    <!--Acá se generan las oraciones al clickear en cada "granito"-->
+                </div>
+                <button class="next-btn mt-4 px-4 py-2 bg-yellow-800 text-white rounded-full hidden">Siguiente</button>
+                <div id="gloria1" class="gloria-container container mx-auto py-2 card-light dark:card-dark hidden">
+                    <!--Acá se generan las oraciones del gloria-->
+                </div>
+            </div>
+            <div id="misterio2" class="misterio px-4 py-3 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold mb-2">Segundo misterio.<span id="misterioDos"></span></h2>
+                <div id="misterio2-container">
+                    <!--El contenido del misterio se autogenera acá según el día-->
+                </div>
+                <div class="grid grid-cols-5">
+                    <button id="avemaria-1" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">1</button>
+                    <button id="avemaria-2" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">2</button>
+                    <button id="avemaria-3" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">3</button>
+                    <button id="avemaria-4" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">4</button>
+                    <button id="avemaria-5" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">5</button>
+                    <button id="avemaria-6" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">6</button>
+                    <button id="avemaria-7" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">7</button>
+                    <button id="avemaria-8" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">8</button>
+                    <button id="avemaria-9" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">9</button>
+                    <button id="avemaria-10" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">10</button>  
+                </div>
+                <button class="play-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-full hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <div id="misterio2-oraciones-container" class="avemarias container mx-auto py-2 card-light dark:card-dark">
+                    <!--Acá se generan las oraciones al clickear en cada "granito"-->
+                </div>
+                <button class="next-btn mt-4 px-4 py-2 bg-yellow-800 text-white rounded-full hidden">Siguiente</button>
+                <div id="gloria2" class="gloria-container container mx-auto py-2 card-light dark:card-dark hidden">
+                    <!--Acá se generan las oraciones del gloria-->
+                </div>
+            </div>
+            <div id="misterio3" class="misterio px-4 py-3 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold mb-2">Tercer misterio.<span id="misterioTres"></span></h2>
+                <div id="misterio3-container">
+                    <!--El contenido del misterio se autogenera acá según el día-->
+                </div>
+                <div class="grid grid-cols-5">
+                    <button id="avemaria-1" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">1</button>
+                    <button id="avemaria-2" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">2</button>
+                    <button id="avemaria-3" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">3</button>
+                    <button id="avemaria-4" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">4</button>
+                    <button id="avemaria-5" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">5</button>
+                    <button id="avemaria-6" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">6</button>
+                    <button id="avemaria-7" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">7</button>
+                    <button id="avemaria-8" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">8</button>
+                    <button id="avemaria-9" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">9</button>
+                    <button id="avemaria-10" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">10</button>  
+                </div>
+                <button class="play-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-full hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <div id="misterio3-oraciones-container" class="avemarias container mx-auto py-2 card-light dark:card-dark">
+                    <!--Acá se generan las oraciones al clickear en cada "granito"-->
+                </div>
+                <button class="next-btn mt-4 px-4 py-2 bg-yellow-800 text-white rounded-full hidden">Siguiente</button>
+                <div id="gloria3" class="gloria-container container mx-auto py-2 card-light dark:card-dark hidden">
+                    <!--Acá se generan las oraciones del gloria-->
+                </div>
+            </div>
+            <div id="misterio4" class="misterio px-4 py-3 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold mb-2">Cuarto misterio.<span id="misterioCuatro"></span></h2>
+                <div id="misterio4-container">
+                    <!--El contenido del misterio se autogenera acá según el día-->
+                </div>
+                <div class="grid grid-cols-5">
+                    <button id="avemaria-1" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">1</button>
+                    <button id="avemaria-2" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">2</button>
+                    <button id="avemaria-3" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">3</button>
+                    <button id="avemaria-4" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">4</button>
+                    <button id="avemaria-5" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">5</button>
+                    <button id="avemaria-6" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">6</button>
+                    <button id="avemaria-7" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">7</button>
+                    <button id="avemaria-8" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">8</button>
+                    <button id="avemaria-9" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">9</button>
+                    <button id="avemaria-10" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">10</button>  
+                </div>
+                <button class="play-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-full hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <div id="misterio4-oraciones-container" class="avemarias container mx-auto py-2 card-light dark:card-dark">
+                    <!--Acá se generan las oraciones al clickear en cada "granito"-->
+                </div>
+                <button class="next-btn mt-4 px-4 py-2 bg-yellow-800 text-white rounded-full hidden">Siguiente</button>
+                <div id="gloria4" class="gloria-container container mx-auto py-2 card-light dark:card-dark hidden">
+                    <!--Acá se generan las oraciones del gloria-->
+                </div>
+            </div>
+            <div id="misterio5" class="misterio px-4 py-3 rounded-lg shadow-md card-light dark:card-dark">
+                <h2 class="text-xl font-bold mb-2">Quinto misterio.<span id="misterioCinco"></span></h2>
+                <div id="misterio5-container">
+                    <!--El contenido del misterio se autogenera acá según el día-->
+                </div>
+                <div class="grid grid-cols-5">
+                    <button id="avemaria-1" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">1</button>
+                    <button id="avemaria-2" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">2</button>
+                    <button id="avemaria-3" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">3</button>
+                    <button id="avemaria-4" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">4</button>
+                    <button id="avemaria-5" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">5</button>
+                    <button id="avemaria-6" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">6</button>
+                    <button id="avemaria-7" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">7</button>
+                    <button id="avemaria-8" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">8</button>
+                    <button id="avemaria-9" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">9</button>
+                    <button id="avemaria-10" class="btn-misterio m-1 py-1 bg-yellow-600 text-white rounded-full">10</button>  
+                </div>
+                <button class="play-btn mt-2 px-4 py-2 bg-yellow-600 text-white rounded-full hidden"><i class="bi bi-play-circle"></i> Escuchar</button>
+                <div id="misterio5-oraciones-container" class="avemarias container mx-auto py-2 card-light dark:card-dark">
+                    <!--Acá se generan las oraciones al clickear en cada "granito"-->
+                </div>
+                <button class="next-btn mt-4 px-4 py-2 bg-yellow-800 text-white rounded-full hidden">Siguiente</button>
+                <div id="gloria5" class="gloria-container container mx-auto py-2 card-light dark:card-dark hidden">
+                    <!--Acá se generan las oraciones del gloria-->
+                </div>
+            </div>
+            <div class="final px-4 py-3 shadow-md card-light dark:card-dark rounded-xl mb-[700px]">
+                <h2 class="text-xl font-bold">Oraciones finales</h2>
+                <div id="orFinales-container" class="container mx-auto py-2 card-light dark:card-dark">
+                    <!--Acá se generan las tarjetas con el contenido de las oraciones finales-->
+                </div>
+            </div>
+            
+    </div>
+
+    <script src="../js/rosario.js"></script>
+</body>
+</html>

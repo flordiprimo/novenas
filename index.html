@@ -60,24 +60,30 @@
             <div class="p-6 rounded-lg shadow-md card-light dark:card-dark">
                 <h2 class="text-xl font-bold">Novena de Fátima</h2>
                 <img src="images/virgen-fatima.jpg" alt="Virgen de Fátima" class="w-full h-48 object-cover mt-4 mb-4 rounded-lg">
+                <p id="estado-fatima" class="text-gray-700 pb-1 font-bold"></p>
                 <p id="fatimaDays" class="text-gray-700">Días para la novena: </p>
+                
             </div>
 
             <!-- Novena San Expedito Card -->
             <div class="p-6 rounded-lg shadow-md card-light dark:card-dark">
                 <h2 class="text-xl font-bold">Novena de San Expedito</h2>
                 <img src="images/san-expedito.jpg" alt="San Expedito" class="w-full h-48 object-cover mt-4 mb-4 rounded-lg">
+                <p id="estado-sanexpedito" class="text-gray-700 pb-1 font-bold"></p>
                 <p id="expeditoDays" class="text-gray-700">Días para la novena: </p>
+                
             </div>
 
             <!-- Rosario Card -->
             <div class="p-6 rounded-lg shadow-md card-light dark:card-dark">
                 <h2 class="text-xl font-bold">Rezar Rosario</h2>
                 <img src="images/rosario.jpg" alt="Rosario" class="w-full h-48 object-cover mt-4 mb-4 rounded-lg">
-                <div class="flex space-x-4">
-                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">Rezar Rosario</button>
+                <p id="rosario-status" class="pb-2 font-bold"></p>
+                <div class="flex space-x-4 pb-2">
+                    <a href="html/rosario-home.html"><button class="px-4 py-2 bg-blue-600 text-white rounded-lg">Rezar Rosario</button></a>
                     <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">Rezar por Audio</button>
                 </div>
+                <button id="rosario-reset" class="px-4 w-full py-2 bg-red-900 text-white rounded-lg">Resetear estado</button>
             </div>            
         </div>
     </section>
