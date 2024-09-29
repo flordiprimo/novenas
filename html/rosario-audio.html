@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="light-mode font-serif card-light dark:card-darker">
+    <!-- Nav Bar -->
+    <nav class="fixed w-full flex justify-between p-4 light-mode">
+        <div class="text-2xl font-bold">Santo Rosario</div>
+        <div class="flex items-center space-x-4">
+            <!--rezar audio-->
+            <a href="rosario-home.html"><button id="" class="text-2xl focus:outline-none"><i class="bi bi-card-text"></i></button></a>
+            <!-- Light/Dark Mode Toggle -->
+            <button id="toggleTheme" class="text-2xl focus:outline-none"><i class="bi bi-sun"></i></button>
+            <!-- Hamburguesa -->
+            <button id="menuToggle" class="text-2xl focus:outline-none">☰</button>
+        </div>
+    </nav>
+
+    <!-- Off-canvas Menu -->
+    <div id="sideMenu" class="z-50 fixed top-16 right-0 h-full w-64 transform translate-x-full transition-transform light-mode">
+        <ul class="p-4 space-y-4">
+            <li><a href="../index.html" class="block">Home</a></li>
+            <li><a href="fatima-home.html" class="block">Novena: Fátima</a></li>
+            <ul>
+                <li><a href="fatima-1.html" class="block">Dia 1</a></li>
+                <li><a href="fatima-2.html" class="block">Dia 2</a></li>
+                <li><a href="fatima-3.html" class="block">Dia 3</a></li>
+                <li><a href="fatima-4.html" class="block">Dia 4</a></li>
+                <li><a href="fatima-5.html" class="block">Dia 5</a></li>
+                <li><a href="fatima-6.html" class="block">Dia 6</a></li>
+                <li><a href="fatima-7.html" class="block">Dia 7</a></li>
+                <li><a href="fatima-8.html" class="block">Dia 8</a></li>
+                <li><a href="fatima-9.html" class="block">Dia 9</a></li>
+            </ul>
+            <li><a href="sanexpedito-home.html" class="block">Novena: San Expedito</a></li>
+            <ul>
+                <li><a href="sanexpedito-1.html" class="block">Dia 1</a></li>
+                <li><a href="sanexpedito-2.html" class="block">Dia 2</a></li>
+                <li><a href="sanexpedito-3.html" class="block">Dia 3</a></li>
+                <li><a href="sanexpedito-4.html" class="block">Dia 4</a></li>
+                <li><a href="sanexpedito-5.html" class="block">Dia 5</a></li>
+                <li><a href="sanexpedito-6.html" class="block">Dia 6</a></li>
+                <li><a href="sanexpedito-7.html" class="block">Dia 7</a></li>
+                <li><a href="sanexpedito-8.html" class="block">Dia 8</a></li>
+                <li><a href="sanexpedito-9.html" class="block">Dia 9</a></li>
+            </ul>
+            <li><a href="rosario-home.html" class="block">Rosario</a></li>
+        </ul>
+    </div>
+    <div id="audio">
+        <!--aca se genera el audio del día-->
+    </div>
+    <div class="card-light dark:card-dark flex justify-center items-center h-screen pt-20">
+        <div class="card-lighter dark:card-dark p-8 rounded-lg shadow-md w-80">
+          <!-- Album Cover -->
+          <img src="../images/virgen-fatima.jpg" alt="fatima" class="w-64 h-64 object-cover mx-auto rounded-lg mb-4 shadow-lg">
+          <!-- Song Title -->
+          <h2 id="title" class="text-xl font-semibold text-center">Santo Rosario</h2>
+          <!-- Artist Name -->
+          <p id="misterioTitle" class="text-gray-600 text-sm text-center">Misterios <span id="misterio_type"></span></p>
+          <!-- Music Controls -->
+          <div class="mt-6 flex justify-center items-center">
+            <button id="atrasar" class="p-3 rounded-full card-light dark:card-dark hover:bg-gray-300 focus:outline-none">
+                <svg width="64px" height="64px" viewBox="0 0 68 64" class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M20 32l12-12v8h8v8h-8v8z" /> <!-- Flecha hacia la izquierda -->
+                      <text x="40" y="40" font-family="Arial" font-size="24" text-anchor="left"> 10</text> <!-- Número 10 -->
+                    </g>
+                  </svg>         
+            </button>
+            <button id="play-pause" class="play p-4 rounded-full card-light dark:card-dark hover:bg-gray-300 focus:outline-none mx-4">
+                <!--aca se genera el botón-->
+            </button>
+            <button id="adelantar" class="p-3 rounded-full card-light dark:card-dark hover:bg-gray-300 focus:outline-none">
+                <svg width="64px" height="64px" viewBox="0 0 64 64" class="w-6 h-6 text-gray-600" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path d="M20 32l-12-12v8h-8v8h8v8z"/>
+                      <text x="25" y="40" font-family="Arial" font-size="24" >10</text>
+                    </g>
+                  </svg>
+                  
+            </button>
+          </div>
+          <!-- Progress Bar -->
+          <div class="mt-6 card-light dark:card-dark h-2 rounded-full" id="progressBarContainer">
+            <div id="barra" class="barra bg-yellow-600 h-2 rounded-full" style="width: 0%;"></div>
+          </div>
+          <!-- Time Information -->
+          <div class="flex justify-between mt-2 text-sm card-lighter">
+            <span id="currentTime">0:00</span>
+            <span id="totalDuration"></span>
+          </div>
+        </div>
+      </div>
+
+    <script src="../js/rosario-audio.js"></script>
+</body>
+</html>
