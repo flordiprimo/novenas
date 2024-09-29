@@ -132,6 +132,9 @@ audio.src = misterioDiario.audio
 audioContainer.appendChild(audio)
 audio.controls = true
 
+// Oculta el elemento de audio visualmente
+audio.style.display = 'none';
+
 // play button
 let playPause = document.getElementById('play-pause')
 
@@ -178,19 +181,51 @@ function actualizarBarraDeProgreso() {
     const porcentaje = (audio.currentTime / audio.duration) * 100; // Calcular el porcentaje
     barra.style.width = `${porcentaje}%`; // Actualizar el ancho de la barra
 }
+// Función para calcular la nueva posición del audio en función de la posición del clic o deslizado
+function setAudioProgress(e) {
+    const rect = progressBarContainer.getBoundingClientRect();
+    const clickX = e.clientX || e.touches[0].clientX - rect.left; // Compatibilidad con touch
+    const porcentaje = (clickX / rect.width);
+    audio.currentTime = porcentaje * audio.duration;
+}
+
 
 // Agregar evento de clic al contenedor de la barra de progreso
 progressBarContainer.addEventListener('click', (e) => {
-    // Calcular la posición del clic en relación al contenedor
-    const rect = progressBarContainer.getBoundingClientRect();
-    const clickX = e.clientX - rect.left; // Posición del clic en el contenedor
-    const porcentaje = (clickX / rect.width); // Porcentaje del clic
-
-    // Establecer el nuevo tiempo del audio
-    audio.currentTime = porcentaje * audio.duration; // Mover el tiempo actual del audio
+    setAudioProgress(e);
 });
 
+// Funcionalidad para permitir arrastrar la barra de progreso
+let isDragging = false;
 
+progressBarContainer.addEventListener('mousedown', () => {
+    isDragging = true;
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+});
+
+progressBarContainer.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        setAudioProgress(e);
+    }
+});
+
+// Agregar soporte para dispositivos táctiles (drag en mobile)
+progressBarContainer.addEventListener('touchstart', () => {
+    isDragging = true;
+});
+
+document.addEventListener('touchend', () => {
+    isDragging = false;
+});
+
+progressBarContainer.addEventListener('touchmove', (e) => {
+    if (isDragging) {
+        setAudioProgress(e);
+    }
+});
 // Agregar un evento para actualizar la barra de progreso mientras se reproduce el audio
 audio.addEventListener('timeupdate', actualizarBarraDeProgreso);
 
@@ -251,9 +286,9 @@ if ('mediaSession' in navigator) {
  }
  
 
-// boton finalizar
+//boton finalizar
 
-/*let botonFinish = document.getElementsByClassName('finish-btn')
+let botonFinish = document.getElementsByClassName('finish-btn')
 
 for (let boton of botonFinish){
     boton.addEventListener('click', (e) =>{
@@ -273,4 +308,4 @@ for (let boton of botonFinish){
         redirect(url)
         }
     })
-}*/
+}
