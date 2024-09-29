@@ -130,6 +130,7 @@ let audio = document.createElement('audio')
 audio.id = "audioPlayer"
 audio.src = misterioDiario.audio
 audioContainer.appendChild(audio)
+audio.controls = true
 
 // play button
 let playPause = document.getElementById('play-pause')
@@ -232,7 +233,23 @@ document.getElementById('adelantar').addEventListener('click', () => {
     audio.currentTime = Math.min(audio.duration, audio.currentTime + 10); // Adelantar 10 segundos, no más que la duración total
 });
 
-
+if ('mediaSession' in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+       title: `Misterios ${misterioDiario.nombre}`,
+       artist: 'Santo Rosario',
+       album: 'Santo Rosario',
+       artwork: [
+          { src: "../images/rosario.jpg" , sizes: '512x512', type: 'image/jpg' }
+       ]
+    });
+ 
+    // Opcional: Controles personalizados en la pantalla de bloqueo
+    navigator.mediaSession.setActionHandler('play', function() { audio.play(); });
+    navigator.mediaSession.setActionHandler('pause', function() { audio.pause(); });
+    navigator.mediaSession.setActionHandler('seekbackward', function() { audio.currentTime = Math.max(audio.currentTime - 10, 0); });
+    navigator.mediaSession.setActionHandler('seekforward', function() { audio.currentTime = Math.min(audio.currentTime + 10, audio.duration); });
+ }
+ 
 
 // boton finalizar
 
