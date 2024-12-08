@@ -83,7 +83,7 @@ function leerFragmento() {
 
     let utterance = new SpeechSynthesisUtterance(fragmentos[indiceActual]);
     utterance.voice = voz; // Asignar la voz seleccionada
-    utterance.rate = 1.25; // Velocidad fija
+    utterance.rate = 1; // Velocidad fija
     window.speechSynthesis.speak(utterance);
     utteranceEnded = false
 
