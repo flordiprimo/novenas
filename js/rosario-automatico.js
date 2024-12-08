@@ -32,7 +32,7 @@ console.log(misterios)
  }
 
 
-// Función para pausar o resumir la lectura
+/*// Función para pausar o resumir la lectura
 function togglePlayPause() {
     if (isPlaying) {
         // Si está reproduciendo, pausar
@@ -49,12 +49,74 @@ function togglePlayPause() {
         isPlaying = true;
         playButton.innerHTML = "<i class='bi bi-pause'></i>"; // Cambiar el texto del botón
     }
+}*/
+
+let audioContainer = document.getElementById('audio')
+console.log(misterioDiario)
+
+//Oraciones Rosario
+const rosarioAudio = {
+    gozosos:{
+        nombre: "Gozosos",
+        audio: "../audio/Rosario-Gozosos.mp3"
+    },
+    gloriosos:{
+        nombre: "Gloriosos",
+        audio: "../audio/Rosario-Gloriosos.mp3"
+    },
+    dolorosos:{
+        nombre: "Dolorosos",
+        audio: "../audio/Rosario-Dolorosos.mp3"
+    },
+    luminosos:{
+        nombre: "Luminosos",
+        audio: "../audio/Rosario-Luminosos.mp3"
+    }
 }
+
+let getAudio = () =>{
+    let fecha = new Date();
+    let dia = fecha.getDay()
+
+    if (dia === 1 || dia === 6) {
+        return rosarioAudio.gozosos
+      } else if (dia === 2 || dia === 5) {
+        return rosarioAudio.dolorosos
+      } else if (dia === 3 || dia === 0) {
+        return rosarioAudio.gloriosos
+      } else if (dia === 4) {
+        return rosarioAudio.luminosos
+      } else {
+        return rosarioAudio.gozosos
+      }
+    };
+
+let foundAudio = getAudio()
+console.log(foundAudio)
+
+let audio = document.createElement('audio')
+audio.id = "audioPlayer"
+audio.src = foundAudio.audio
+audio.playbackRate = 1.25; // Cambia a 1.25x
+audioContainer.appendChild(audio)
+audio.controls = true
+
+// Oculta el elemento de audio visualmente
+audio.style.display = 'none';
 
 // Iniciar la lectura al hacer clic en el botón play
 let playButton = document.getElementById('audio-play');
+console.log(playButton)
 playButton.addEventListener('click', () => {
-    togglePlayPause();
-});
+console.log('click')
+if (audio.paused) {
+    audio.play();
+    console.log('hizo play')
+    playButton.innerHTML = "<i class='bi bi-pause'></i>"; // Cambiar a pausa
+} else {
+    console.log('aca')
+    audio.pause();
+    playButton.innerHTML = "<i class='bi bi-play'></i>" // Cambiar a play
+}});
 
 
