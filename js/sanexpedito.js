@@ -99,7 +99,7 @@ const novenaSanExpedito = [
     {
         intencionInicial: `Oh San Expedito, acudo a ti, implorando tu pronta asistencia, para que tu poderosa intercesión me obtenga de la infinita bondad del Señor, la ayuda que más humildemente solicito de su divina misericordia`,
         invocacion: `Oh Cristo, protégenos mañana y siempre, pero especialmente hoy.`,
-        padreNuestro: `Padre nuestro, que estás en el cielo, santificado sea tu nombre. Venga a nosotros tu reino. Hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día. Perdona nuestras ofensas, como nosotros perdonamos a los que nos ofenden. No nos dejes caer en la tentación, y líbranos del mal, ¡Amén!. `,
+        padreNuestro: `Padre nuestro, que estás en el cielo, santificado sea tu nombre. Venga a nosotros tu reino. Hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día. Perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden. No nos dejes caer en la tentación, y líbranos del mal, ¡Amén!. `,
         aveMaria: `Dios te salve María, llena eres de gracia, el señor es contigo, bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre Jesús.
         
         Santa María, madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte, ¡Amén!.`,
@@ -107,9 +107,9 @@ const novenaSanExpedito = [
         oracionSanExpedito: `
         Glorioso San Expedito, que intercédes por las causas justas y urgentes. Ayúdame en este momento de aflicción. Intercede por mi pedido ante nuestro señor Jesucristo. 
 
-        Tú, que eres el santo de la fidelidad y el coraje, atiende mi pedido... (...).
+        Tú, que eres el santo de la fidelidad y el coraje, atiende mi pedido.
 
-        Te pido por mi familia, y que descienda la paz. Haz que me una cada día más a Jesús, y a María, su madre, para que pueda gozar un día de su presencia, ¡Amén!
+        Te pido por mi familia, y que descienda la paz. Haz que me una cada día más a Jesús, y a María, su madre, para que convierta mi corazón y pueda gozar un día de su presencia, ¡Amén!
         `,
         oracionDiaria: `Señor, Dios y Padre nuestro, que nos permites invocar a San Expedito como intercesor, especialmente en las causas que consideremos justas y urgentes, te suplicamos que en esta hora de aflicción y desesperanza nos asistas con tu gracia.
 
