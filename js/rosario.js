@@ -160,22 +160,22 @@ const rosario = {
                 imagen: `../images/misteriogloria1.jpg`,
             },
             dos: {
-                titulo: "Segundo misterio. La ascensión del Señor a los cielos.",
+                titulo: "La ascensión del Señor a los cielos.",
                 descripcion: `Jesús dijo a sus discípulos:. Sabed que yo estoy con vosotros todos los días hasta el fin del mundo”.  “El Señor Jesús, después de hablarles, ascendió a los cielos, y se sentó a la derecha de Dios.`,
                 imagen: `../images/misteriogloria2.jpg`,
             },
             tres: {
-                titulo: "Tercer misterio. La venida del Espíritu Santo sobre los apóstoles.",
+                titulo: "La venida del Espíritu Santo sobre los apóstoles.",
                 descripcion: `De repente, un ruido del cielo, como de un viento recio, resonó en toda la casa donde estaban los discípulos. Vieron aparecer unas lenguas, como llamaradas, que se repartían posándose encima de cada uno. Se llenaron todos de Espíritu Santo.`,
                 imagen: `../images/misteriogloria3.jpg`,
             },
             cuatro: {
-                titulo: "Cuarto misterio. La Asunción de María a los cielos.",
+                titulo: "La Asunción de María a los cielos.",
                 descripcion: `María dijo:. Me felicitarán todas las generaciones, porque el Poderoso ha hecho obras grandes por mí.`,
                 imagen: `../images/misteriogloria4.jpg`,
             },
             cinco: {
-                titulo: "Quinto misterio. La coronación de María en los cielos.",
+                titulo: "La coronación de María en los cielos.",
                 descripcion: `Una gran señal apareció en el cielo:. una Mujer, vestida de sol, con la luna bajo sus pies, y una corona de doce estrellas sobre su cabeza.`,
                 imagen: `../images/misteriogloria5.jpg`,
             },
@@ -210,12 +210,12 @@ const rosario = {
         },
     },
     oraciones: [
-        ["avemaria",`Dios te salve María, llena eres de gracia, el Señor es contigo, bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre Jesús,
+        ["avemaria",`Dios te salve María, llena eres de gracia, el Señor es contigo, bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre Jesús.
 
         Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte, Amén.`],
         ["Padrenuestro",`Padre nuestro, que estás en el cielo, santificado sea tu Nombre. Venga a nosotros tu reino, hágase tu voluntad en la tierra como en el cielo.
 
-        Danos hoy nuestro pan de cada día, perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden. No nos dejes caer en la tentaciónm y líbranos del mal, Amén.`],
+        Danos hoy nuestro pan de cada día, perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden. No nos dejes caer en la tentación y líbranos del mal, Amén.`],
         ["Gloria",`Gloria al Padre, al Hijo, y al Espíritu Santo.
 
         Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.`],
@@ -397,7 +397,9 @@ let getMisterio = () =>{
       } else {
         misterioDiario = rosario.misterios.gozosos
       }
-    };
+    }
+    localStorage.setItem('misterioDiario',JSON.stringify(misterioDiario))
+    ;
 
 getMisterio()
 
@@ -412,7 +414,6 @@ let orIniciales = document.getElementById('orIniciales-container')
 for (let oracion of rosario.oracionesIniciales){
     let title = oracion[0]
     let texto = oracion[1]
-    console.log(texto)
     // si es la primera oracion, que esté expandida
     if(title == "Señal de la Cruz"){
     let card = document.createElement('div')
@@ -426,6 +427,8 @@ for (let oracion of rosario.oracionesIniciales){
     let buttonEscuchar = document.createElement('button')
     buttonEscuchar.classList.add('play-btn', 'mt-2', 'px-4', 'py-2', 'bg-yellow-600', 'text-white' ,'rounded-full')
     buttonEscuchar.innerHTML = '<i class="bi bi-play-circle"></i> Escuchar'
+    let playid = "play_orIni_" + title.slice(0,3)
+    buttonEscuchar.id = playid
     let text = document.createElement('p')
     text.classList.add('m-4')
     text.innerText = texto
@@ -478,7 +481,6 @@ let orFinales = document.getElementById('orFinales-container')
 for (let oracion of rosario.oracionesFinales){
     let title = oracion[0]
     let texto = oracion[1]
-    console.log(texto)
     let card = document.createElement('div')
     card.classList.add('p-4', 'rounded-lg', 'shadow-md', 'card-lighter', 'dark:card-darker','mb-2')
     let titulo = document.createElement('h2')
@@ -513,6 +515,7 @@ for (let oracion of rosario.oracionesFinales){
     orFinales.appendChild(card)
 }
 
+
 // contenido primer misterio
 
 let misterioUnoContainer = document.getElementById('misterio1-container')
@@ -535,7 +538,7 @@ misterio1_content.classList.add('container','flex')
     misterio1_foto.src = misterioUnoContenido.imagen
     let misterio1_text = document.createElement('p')
     misterio1_text.classList.add('m-4')
-    misterio1_text.innerText = misterioUnoContenido.descripcion
+    misterio1_text.innerText = `${misterioUnoContenido.descripcion}`
     misterio1_content.appendChild(misterio1_foto)
     misterio1_content.appendChild(misterio1_text)
 //let misterio1_buttonNext = document.createElement('button')
@@ -546,14 +549,13 @@ misterio1_content.classList.add('container','flex')
     misterio1_card.appendChild(misterio1_buttonEscuchar)
     misterio1_card.appendChild(misterio1_content)
 //S    misterio1_card.appendChild(misterio1_buttonNext)
-    misterioUnoContainer.appendChild(misterio1_card)
+misterioUnoContainer.appendChild(misterio1_card)
 
 
 // contenido segundo misterio
 
 let misterioDosContainer = document.getElementById('misterio2-container')
 let misterioDosContenido = misterioDiario.dos
-console.log(misterioDosContenido)
 let misterio2_card = document.createElement('div')
 misterio2_card.classList.add('p-0', 'rounded-lg', 'card-light', 'dark:card-dark','mb-2', 'misterio')
 let misterio2_titulo = document.getElementById('misterioDos')
@@ -579,7 +581,6 @@ misterio2_content.classList.add('container','flex')
 
 let misterioTresContainer = document.getElementById('misterio3-container')
 let misterioTresContenido = misterioDiario.tres
-console.log(misterioTresContenido)
 let misterio3_card = document.createElement('div')
 misterio3_card.classList.add('p-0', 'rounded-lg', 'card-light', 'dark:card-dark','mb-2', 'misterio')
 let misterio3_titulo = document.getElementById('misterioTres')
@@ -605,7 +606,6 @@ misterio3_content.classList.add('container','flex')
 
     let misterioCuatroContainer = document.getElementById('misterio4-container')
     let misterioCuatroContenido = misterioDiario.cuatro
-    console.log(misterioCuatroContenido)
     let misterio4_card = document.createElement('div')
     misterio4_card.classList.add('p-0', 'rounded-lg', 'card-light', 'dark:card-dark','mb-2', 'misterio')
     let misterio4_titulo = document.getElementById('misterioCuatro')
@@ -631,7 +631,6 @@ misterio3_content.classList.add('container','flex')
 
 let misterioCincoContainer = document.getElementById('misterio5-container')
 let misterioCincoContenido = misterioDiario.cinco
-console.log(misterioCincoContenido)
 let misterio5_card = document.createElement('div')
 misterio5_card.classList.add('p-0', 'rounded-lg', 'card-light', 'dark:card-dark','mb-2', 'misterio')
 let misterio5_titulo = document.getElementById('misterioCinco')
@@ -958,9 +957,7 @@ let contenedorOraciones = document.getElementById('day-container')
 for (let boton of botonesnext){
     boton.addEventListener('click', (e) =>{
     let botonClick = e.target
-    console.log(botonClick)
     let container = botonClick.parentNode
-    console.log(container)
 
     //SI ES NEXT DENTRO DE CADA MISTERIO
     if(container.classList.contains('misterio')){
@@ -1006,7 +1003,6 @@ for (let boton of botonesnext){
         let gloriaID = container.children[0].textContent.slice(0,3)
         let botonPlay = container.children[2]
         let botonRezar = container.children[1]
-        console.log(botonRezar)
         botonPlay.classList.add('hidden')
        botonRezar.innerText = "Ya lo recé"
        botonRezar.classList.remove('bg-green-900')
@@ -1041,7 +1037,6 @@ for (let boton of botonesnext){
     }
     // si el boton dice siguiente dentro de las oraciones del gloria y es la ultima
     if(container.nextElementSibling == null){
-       console.log('ES UN OH JESUS MIO')
        let gloria = container.parentElement
        let misterioOld = gloria.parentElement
        let gloriaID = container.children[0].textContent.slice(0,3)
@@ -1213,6 +1208,21 @@ for (let boton of botonesnext){
             }, 500);
         }
     }
+    // si estoy en un padre nuestro
+    if(container.classList.contains('pn')){
+        let next = container.parentElement.children[3]
+        // lo centra arriba
+        next.scrollIntoView({behavior: 'smooth', // Desplazamiento suave
+            block: 'start' // Alinea el elemento al inicio de la vista
+            })
+        // Luego, ajusta la posición con un desplazamiento adicional
+        setTimeout(() => {
+            window.scrollBy({
+                top: -340, // Ajusta esta cantidad a tu necesidad
+                behavior: 'smooth'
+            });
+        }, 500);
+    }
 
 })}
 
@@ -1246,7 +1256,6 @@ for (let boton of botonFinish){
 
 //TEXTO A VOZ
 // Variables para manejar el estado de la voz
-let synth = window.speechSynthesis;
 let utterance;
 let isSpeaking = false;
 
@@ -1273,28 +1282,34 @@ botonesEscuchar.forEach((boton) => {
     else{
     text = container.children[3].textContent;}
 
-    if (!isSpeaking) {
-      // Si no está hablando, comienza a leer el texto
-      utterance = new SpeechSynthesisUtterance(text);
-      synth.speak(utterance);
-      boton.textContent = 'Pausar';
-      isSpeaking = true;
-    } else {
-      // Si está hablando, pausa o retoma la lectura
-      if (synth.paused) {
-        synth.resume();
+    if (!isPlaying) {
+        // Si no está hablando, comienza a leer el texto
+        leer(text,voz1)
         boton.textContent = 'Pausar';
+        isPlaying = true;
       } else {
-        synth.pause();
-        boton.textContent = 'Reanudar';
+        // Si está hablando, pausa o retoma la lectura
+        if (window.speechSynthesis.paused) {
+          console.log(window.speechSynthesis.paused)
+          window.speechSynthesis.resume();
+          boton.textContent = 'Pausar';
+        } else {
+          window.speechSynthesis.pause();
+          boton.textContent = 'Reanudar';
+        }
       }
-    }
+  
+      // Detectar cuándo termina de hablar para resetear el botón
+      const onEnd = () => {
+          console.log('Lectura finalizada');
+          boton.textContent = 'Escuchar'; // Restaurar texto del botón
+          isPlaying = false;
+  
+          // Eliminar listener para evitar múltiples llamadas
+          window.speechSynthesis.removeEventListener('end', onEnd);
+        };
+      window.speechSynthesis.addEventListener('end', onEnd)
 
-    // Detectar cuándo termina de hablar para resetear el botón
-    utterance.onend = () => {
-      boton.textContent = 'Escuchar';
-      isSpeaking = false;
-    };
   });
 });
 
@@ -1321,7 +1336,7 @@ let trackStatus = ()=>{
         console.log(misterioId)
         let oracion = estado.split('_')[1]
         let contenedor = document.getElementById(container)
-        let misterios = contenedor.children[2]
+        let misterios = contenedor.children[3]
         console.log(misterios)
         let buttonID = "avemaria-" + oracion
         let button = misterios.querySelector(`#${buttonID}`)
@@ -1339,6 +1354,13 @@ let trackStatus = ()=>{
     }
     if (container == "OrFin"){
         console.log('es or final')
+        let oracion = estado.split('_')[1]
+        let boton = document.getElementsByClassName(estado)
+        console.log(boton)
+        boton[0].click()
+
+    }
+    if (container.includes("pn")){
         let oracion = estado.split('_')[1]
         let boton = document.getElementsByClassName(estado)
         console.log(boton)

@@ -169,6 +169,10 @@ calculateDaysUntil(4, 'fatimaDays', 'Fátima');
 // Novena San Expedito (comienza el día 10)
 calculateDaysUntil(10, 'expeditoDays', 'San Expedito');
 
+// Función para actualizar el estado del rosario en localStorage
+const updateRosarioStatus = (variable) => {
+    localStorage.setItem(`rosario`, variable);
+};
 
 // Función para obtener el estado del rosario desde localStorage
 const getRosarioStatus = () => {

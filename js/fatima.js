@@ -109,15 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const novenaFatima = [
     {
-        intencionInicial: 'Por nuestras familias. Para que sientan la dulce presencia de María, y así tener la certeza y total confianza de ser guiados por ella en estos difíciles momentos que pasa la humanidad.',
+        intencionInicial: 'Por nuestras familias, para que sientan la dulce presencia de María, y así tener la certeza y total confianza de ser guiados por ella en estos difíciles momentos que pasa la humanidad.',
         oracionFatima: `Bienaventurada María, Virgen de Fátima, con renovada gratitud por tu presencia maternal, unimos nuestra voz a la de todas las generaciones que te llaman Bienaventurada.
-        
+
         Celebramos en ti las grandes obras de Dios, quien nunca se cansa de inclinarse misericordiosamente hacia la humanidad afligida por el mal, y herida por el pecado, para curarla y salvarla.
-        
+
         Acoge con benevolencia de Madre nuestra oración que hoy hacemos con confianza, ante ti, nuestra querida Madre.
-        
         Estamos seguros de que cada uno de nosotros es precioso a tus ojos y que nada de lo que habita en nuestros corazones es ajeno a ti.
-        
+
         Custodia nuestra vida entre tus brazos;
         Reaviva y alimenta la fe;
         Bendice y refuerza todo deseo de bien;
@@ -127,14 +126,14 @@ const novenaFatima = [
         Guíanos a todos por el camino de la santidad.
 
         Enséñanos tú mismo amor de predilección por los pequeños y por los pobres, por los excluidos y por los que sufren, por los pecadores y por los extraviados de corazón.
-        
-        Congrega a todos bajo tu protección y entréganos a todos nosotros a tu Adorado Hijo Jesús, nuestro Señor. ¡Amén!
+
+        Congrega a todos bajo tu protección y entréganos a todos nosotros a tu Adorado Hijo Jesús, nuestro Señor, ¡Amén!
         `,
-        oracionDiaria1: `¡Oh Dios mío!. Yo creo, adoro, espero, y te amo. 
+        oracionDiaria1: `¡Oh Dios mío! Yo creo, adoro, espero, y te amo. 
         
         Te pido perdón por los que no creen, no adoran, no esperan, y no te aman.
         
-        ¡Oh Santísima Trinidad: Padre, Hijo y Espíritu Santo!. Yo te adoro profundamente y te ofrezco el preciosísimo cuerpo, sangre, alma, y divinidad de Nuestro Señor Jesucristo, presente en todos los tabernáculos del mundo, en reparación de los ultrajes con los que es ofendido.
+        ¡Oh Santísima Trinidad: Padre, Hijo y Espíritu Santo! Yo te adoro profundamente y te ofrezco el preciosísimo cuerpo, sangre, alma, y divinidad de Nuestro Señor Jesucristo, presente en todos los tabernáculos del mundo, en reparación de los ultrajes con los que es ofendido.
         Y por los méritos infinitos de su Santísimo Corazón, e intercesión del Inmaculado Corazón de María, te pido la conversión de los pecadores ¡Amén!
         `,
         oracionDiaria2: `¡Oh, Santísima Virgen María, Reina del Rosario y Madre de misericordia.
@@ -212,7 +211,7 @@ const novenaFatima = [
         
         Concédenos el don y el espíritu de oración, la gracia de ser fieles en el cumplimiento del gran precepto de orar, haciéndolo todos los días, para así poder observar bien los santos mandamientos, vencer las tentaciones, para poder obtener el conocimiento y un gran amor a Jesucristo en esta vida, y hasta la unión feliz con Él en la eternidad, ¡Amén!`,
         meditacion: `
-        La oración es un refugio esencial en tiempos de crisis y turbulencia. El Papa Francisco destaca el poder del Rosario, como un medio poderoso para la paz y la conversión. En momentos difíciles, invocamos la protección de la Madre de Dios con oraciones como el ‘Sub Tuum Praesidium’, que nos invita a buscar amparo en la Virgen María, y a construir comunidades de paz. 
+        En el tercer día de la novena, reconocemos a la oración como un refugio esencial en tiempos de crisis y turbulencia. El Papa Francisco destaca el poder del Rosario, como un medio poderoso para la paz y la conversión. En momentos difíciles, invocamos la protección de la Madre de Dios con oraciones como el ‘Sub Tuum Praesidium’, que nos invita a buscar amparo en la Virgen María, y a construir comunidades de paz. 
         
         Nada es imposible cuando nos dirigimos a Dios con fe, y todos podemos contribuir a la paz a través de la oración.
         
@@ -672,12 +671,14 @@ for (let container of rosarioContainers){
     }
 }
 
+/*
 //TEXTO A VOZ
+
 // Variables para manejar el estado de la voz
 let synth = window.speechSynthesis;
 let utterance;
 let isSpeaking = false;
-
+*/
 // Seleccionar los botones de "Escuchar"
 const botonesEscuchar = document.querySelectorAll('.play-btn');
 
@@ -687,28 +688,35 @@ botonesEscuchar.forEach((boton) => {
     const container = e.target.parentNode;
     const text = container.children[3].textContent;
 
-    if (!isSpeaking) {
+
+    if (!isPlaying) {
       // Si no está hablando, comienza a leer el texto
-      utterance = new SpeechSynthesisUtterance(text);
-      synth.speak(utterance);
+      leer(text,voz1)
       boton.textContent = 'Pausar';
-      isSpeaking = true;
+      isPlaying = true;
     } else {
       // Si está hablando, pausa o retoma la lectura
-      if (synth.paused) {
-        synth.resume();
+      if (window.speechSynthesis.paused) {
+        console.log(window.speechSynthesis.paused)
+        window.speechSynthesis.resume();
         boton.textContent = 'Pausar';
       } else {
-        synth.pause();
+        window.speechSynthesis.pause();
         boton.textContent = 'Reanudar';
       }
     }
 
     // Detectar cuándo termina de hablar para resetear el botón
-    utterance.onend = () => {
-      boton.textContent = 'Escuchar';
-      isSpeaking = false;
-    };
+    const onEnd = () => {
+        console.log('Lectura finalizada');
+        boton.textContent = 'Escuchar'; // Restaurar texto del botón
+        isPlaying = false;
+
+        // Eliminar listener para evitar múltiples llamadas
+        window.speechSynthesis.removeEventListener('end', onEnd);
+      };
+    window.speechSynthesis.addEventListener('end', onEnd)
   });
 });
+
 

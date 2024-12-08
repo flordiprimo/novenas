@@ -129,6 +129,7 @@ let audioContainer = document.getElementById('audio')
 let audio = document.createElement('audio')
 audio.id = "audioPlayer"
 audio.src = misterioDiario.audio
+audio.playbackRate = 1.25; // Cambia a 1.25x
 audioContainer.appendChild(audio)
 audio.controls = true
 
@@ -231,21 +232,21 @@ audio.addEventListener('timeupdate', actualizarBarraDeProgreso);
 
 // Obtener los elementos de tiempo
 let currentTimeDisplay = document.getElementById('currentTime');
-let totalDurationDisplay = document.getElementById('totalDuration');
+let totalDurationElement = document.getElementById('totalDuration');
 
 // Función para actualizar el tiempo
 function actualizarTiempo() {
     // Obtener el tiempo actual y la duración
     let currentTime = audio.currentTime;
-    let duration = audio.duration;
-
     // Actualizar el tiempo actual
     currentTimeDisplay.textContent = formatearTiempo(currentTime);
 
-    // Actualizar la duración total solo una vez
-    if (!totalDurationDisplay.textContent.includes(":")) { // Verifica si ya se ha actualizado
-        totalDurationDisplay.textContent = formatearTiempo(duration);
-    }
+}
+
+// Función para actualizar el tiempo restante
+function actualizarTiempoRestante() {
+    let tiempoRestante = audio.duration - audio.currentTime;
+    totalDurationElement.textContent = formatearTiempo(tiempoRestante); // Mostrar tiempo restante
 }
 
 // Función para formatear el tiempo en minutos:segundos
@@ -255,8 +256,12 @@ function formatearTiempo(segundos) {
     return `${minutos}:${segundosRestantes < 10 ? '0' : ''}${segundosRestantes}`;
 }
 
-// Agregar un evento para actualizar el tiempo mientras se reproduce el audio
-audio.addEventListener('timeupdate', actualizarTiempo);
+// Actualizar la barra de progreso y el tiempo restante mientras se reproduce el audio
+audio.addEventListener('timeupdate', () => {
+    actualizarBarraDeProgreso();
+    actualizarTiempo()
+    actualizarTiempoRestante();
+});
 
 // Botón para atrasar
 document.getElementById('atrasar').addEventListener('click', () => {

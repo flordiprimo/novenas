@@ -909,42 +909,49 @@ let saludos_dianueve_texto = novenaSanExpedito[9].saludos
 saludos_dianueve_Container.innerText = saludos_dianueve_texto}
 
 //TEXTO A VOZ
-// Variables para manejar el estado de la voz
+/*// Variables para manejar el estado de la voz
 let synth = window.speechSynthesis;
 let utterance;
 let isSpeaking = false;
-
+*/
 // Seleccionar los botones de "Escuchar"
 const botonesEscuchar = document.querySelectorAll('.play-btn');
 
 // Asignar evento click a cada botón de "Escuchar"
 botonesEscuchar.forEach((boton) => {
-  boton.addEventListener('click', (e) => {
-    const container = e.target.parentNode;
-    const text = container.children[3].textContent;
-
-    if (!isSpeaking) {
-      // Si no está hablando, comienza a leer el texto
-      utterance = new SpeechSynthesisUtterance(text);
-      synth.speak(utterance);
-      boton.textContent = 'Pausar';
-      isSpeaking = true;
-    } else {
-      // Si está hablando, pausa o retoma la lectura
-      if (synth.paused) {
-        synth.resume();
+    boton.addEventListener('click', (e) => {
+      const container = e.target.parentNode;
+      const text = container.children[3].textContent;
+  
+  
+      if (!isPlaying) {
+        // Si no está hablando, comienza a leer el texto
+        leer(text,voz1)
         boton.textContent = 'Pausar';
+        isPlaying = true;
       } else {
-        synth.pause();
-        boton.textContent = 'Reanudar';
+        // Si está hablando, pausa o retoma la lectura
+        if (window.speechSynthesis.paused) {
+          console.log(window.speechSynthesis.paused)
+          window.speechSynthesis.resume();
+          boton.textContent = 'Pausar';
+        } else {
+          window.speechSynthesis.pause();
+          boton.textContent = 'Reanudar';
+        }
       }
-    }
-
-    // Detectar cuándo termina de hablar para resetear el botón
-    utterance.onend = () => {
-      boton.textContent = 'Escuchar';
-      isSpeaking = false;
-    };
+  
+      // Detectar cuándo termina de hablar para resetear el botón
+      const onEnd = () => {
+          console.log('Lectura finalizada');
+          boton.textContent = 'Escuchar'; // Restaurar texto del botón
+          isPlaying = false;
+  
+          // Eliminar listener para evitar múltiples llamadas
+          window.speechSynthesis.removeEventListener('end', onEnd);
+        };
+      window.speechSynthesis.addEventListener('end', onEnd)
+    });
   });
-});
+  
 
