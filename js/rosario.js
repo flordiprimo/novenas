@@ -508,7 +508,7 @@ for (let oracion of rosario.oracionesFinales){
     buttonNext.classList.add('next-btn', 'mt-2', 'px-4', 'py-2', 'bg-yellow-800', 'text-white' ,'rounded-full', 'hidden')
     let id = "OrFin_" + title.slice(0,3)
     buttonNext.classList.add(`${id}`)
-    if (oracion != rosario.oracionesFinales[5]){
+    if (oracion != rosario.oracionesFinales[8]){
         buttonNext.innerText = 'Siguiente'
     }
     else{
