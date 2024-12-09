@@ -367,6 +367,15 @@ const rosario = {
         Para que seamos dignos de alcanzar las promesas de Nuestro Señor Jesucristo. Amén.`],
         ["Oración",`Te pedimos, Señor, nos concedas a nosotros tus siervos, gozar de perpetua salud de alma y cuerpo, y por la gloriosa intercesión de la bienaventurada siempre Virgen María, seamos librados de las tristezas presentes y gocemos de la eterna alegría. Por Jesucristo, nuestro Señor. Amén.`],
         ["Por las intenciones del Santo Padre",`Por las intenciones del Santo Padre y para ganar las indulgencias del Santo Rosario.`],
+        ["Padrenuestro",`Padre nuestro, que estás en el cielo, santificado sea tu Nombre. Venga a nosotros tu reino, hágase tu voluntad en la tierra como en el cielo.
+
+            Danos hoy nuestro pan de cada día, perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden. No nos dejes caer en la tentación y líbranos del mal, Amén.`],
+        ["avemaria",`Dios te salve María, llena eres de gracia, el Señor es contigo, bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre Jesús.
+
+                Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte, Amén.`],
+        ["Gloria",`Gloria al Padre, al Hijo, y al Espíritu Santo.
+
+                    Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.`],
         ["Una Salve a la Virgen",`Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra. Dios te salve. A Ti llamamos los desterrados hijos de Eva. A Ti suspiramos, gimiendo y llorando, en este valle de lágrimas. 
         
         Ea, pues, Señora, abogada nuestra. Vuelve a nosotros, esos tus ojos misericordiosos, y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clementísima, oh piadosa, oh dulce Virgen María!
@@ -672,7 +681,7 @@ for (boton of botonesMisterios){
             // Luego, ajusta la posición con un desplazamiento adicional
             setTimeout(() => {
                 window.scrollBy({
-                    top: -330, // Ajusta esta cantidad a tu necesidad
+                    top: -340, // Ajusta esta cantidad a tu necesidad
                     behavior: 'smooth'
                 });
             }, 500);
@@ -687,7 +696,7 @@ for (boton of botonesMisterios){
             // Luego, ajusta la posición con un desplazamiento adicional
             setTimeout(() => {
                 window.scrollBy({
-                    top: -330, // Ajusta esta cantidad a tu necesidad
+                    top: -340, // Ajusta esta cantidad a tu necesidad
                     behavior: 'smooth'
                 });
             }, 500);
@@ -714,7 +723,7 @@ for (boton of botonesMisterios){
             // Luego, ajusta la posición con un desplazamiento adicional
             setTimeout(() => {
                 window.scrollBy({
-                    top: -330, // Ajusta esta cantidad a tu necesidad
+                    top: -340, // Ajusta esta cantidad a tu necesidad
                     behavior: 'smooth'
                 });
             }, 500);
@@ -964,7 +973,9 @@ for (let boton of botonesnext){
         // SI DENTRO DEL MISTERIO EL BOTON DICE SIGUIENTE (va para gloria)
         if(botonClick.textContent == "Siguiente"){
             console.log('es siguiente')
-            let next = container.children[6]
+            console.log(container)
+            let next = container.children[7]
+            console.log(next)
             next.classList.remove('hidden')
             console.log(next)
             // desesconde el gloria
@@ -985,7 +996,7 @@ for (let boton of botonesnext){
             // Luego, ajusta la posición con un desplazamiento adicional
             setTimeout(() => {
                 window.scrollBy({
-                    top: -330, // Ajusta esta cantidad a tu necesidad
+                    top: -340, // Ajusta esta cantidad a tu necesidad
                     behavior: 'smooth'
                 });
             }, 500);
@@ -1030,7 +1041,7 @@ for (let boton of botonesnext){
         // Luego, ajusta la posición con un desplazamiento adicional
         setTimeout(() => {
            window.scrollBy({
-               top: -330, // Ajusta esta cantidad a tu necesidad
+               top: -340, // Ajusta esta cantidad a tu necesidad
                 behavior: 'smooth'
             });
         }, 500);
@@ -1063,7 +1074,7 @@ for (let boton of botonesnext){
             // Luego, ajusta la posición con un desplazamiento adicional
             setTimeout(() => {
                window.scrollBy({
-                   top: -330, // Ajusta esta cantidad a tu necesidad
+                   top: -340, // Ajusta esta cantidad a tu necesidad
                     behavior: 'smooth'
                 });
             }, 500);}
@@ -1085,7 +1096,7 @@ for (let boton of botonesnext){
                  // Luego, ajusta la posición con un desplazamiento adicional
                  setTimeout(() => {
                     window.scrollBy({
-                        top: -330, // Ajusta esta cantidad a tu necesidad
+                        top: -340, // Ajusta esta cantidad a tu necesidad
                          behavior: 'smooth'
                      });
                  }, 500);
@@ -1133,7 +1144,7 @@ for (let boton of botonesnext){
         // Luego, ajusta la posición con un desplazamiento adicional
         setTimeout(() => {
             window.scrollBy({
-                top: -330, // Ajusta esta cantidad a tu necesidad
+                top: -340, // Ajusta esta cantidad a tu necesidad
                 behavior: 'smooth'
             });
         }, 500);}
@@ -1151,7 +1162,7 @@ for (let boton of botonesnext){
             // Luego, ajusta la posición con un desplazamiento adicional
             setTimeout(() => {
                 window.scrollBy({
-                    top: -330, // Ajusta esta cantidad a tu necesidad
+                    top: -340, // Ajusta esta cantidad a tu necesidad
                     behavior: 'smooth'
                 });
             }, 500);
@@ -1190,7 +1201,7 @@ for (let boton of botonesnext){
         // Luego, ajusta la posición con un desplazamiento adicional
         setTimeout(() => {
             window.scrollBy({
-                top: -330, // Ajusta esta cantidad a tu necesidad
+                top: -340, // Ajusta esta cantidad a tu necesidad
                 behavior: 'smooth'
             });
         }, 500);}
@@ -1202,7 +1213,7 @@ for (let boton of botonesnext){
             // Luego, ajusta la posición con un desplazamiento adicional
             setTimeout(() => {
                 window.scrollBy({
-                    top: -330, // Ajusta esta cantidad a tu necesidad
+                    top: -340, // Ajusta esta cantidad a tu necesidad
                     behavior: 'smooth'
                 });
             }, 500);
