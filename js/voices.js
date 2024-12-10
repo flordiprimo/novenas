@@ -85,7 +85,9 @@ function leerFragmento() {
     //utterance.voice = voz; // Asignar la voz seleccionada
     utterance.rate = 1; // Velocidad fija
     utterance.lang = "es-AR"
-    utterance.voice = ""
+    if(utterance.lang == undefined){
+        utterance.lang = "es-MX"
+    }
     window.speechSynthesis.speak(utterance);
     utteranceEnded = false
 
