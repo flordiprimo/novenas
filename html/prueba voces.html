@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de Voces</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .voice-list {
+      margin-top: 20px;
+    }
+    .voice-item {
+      margin-bottom: 10px;
+    }
+    button {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prueba de Voces Disponibles</h1>
+  <p>Haz clic en "Cargar Voces" para obtener las voces disponibles en este dispositivo.</p>
+  <button id="loadVoices">Cargar Voces</button>
+  <div id="voices" class="voice-list"></div>
+
+  <script>
+    const loadVoicesButton = document.getElementById('loadVoices');
+    const voicesContainer = document.getElementById('voices');
+
+    // Función para listar y probar voces
+    function listarVoces() {
+      const voices = window.speechSynthesis.getVoices();
+
+      // Limpiar el contenedor
+      voicesContainer.innerHTML = '';
+
+      if (voices.length === 0) {
+        voicesContainer.innerHTML = '<p>No se encontraron voces disponibles.</p>';
+        return;
+      }
+
+      voices.forEach((voice, index) => {
+        const voiceItem = document.createElement('div');
+        voiceItem.classList.add('voice-item');
+
+        // Mostrar nombre e idioma de la voz
+        voiceItem.innerHTML = `
+          <strong>${index + 1}. ${voice.name}</strong> (${voice.lang})
+          <button onclick="probarVoz(${index})">Probar</button>
+        `;
+
+        voicesContainer.appendChild(voiceItem);
+      });
+    }
+
+    // Función para probar una voz
+    function probarVoz(index) {
+      const voices = window.speechSynthesis.getVoices();
+      const utterance = new SpeechSynthesisUtterance("Hola, esta es una prueba de voz.");
+      utterance.voice = voices[index];
+      utterance.lang = voices[index].lang;
+      utterance.rate = 1.25; // Velocidad ajustada
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Asignar evento al botón
+    loadVoicesButton.addEventListener('click', () => {
+      if (window.speechSynthesis.onvoiceschanged !== undefined) {
+        window.speechSynthesis.onvoiceschanged = listarVoces;
+      }
+      listarVoces(); // Intentar cargar voces inmediatamente
+    });
+  </script>
+</body>
+</html>
