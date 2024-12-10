@@ -43,8 +43,8 @@ function leerFragmento() {
     }
 
     let utterance = new SpeechSynthesisUtterance(fragmentos[indiceActual]);
-    utterance.lang = "es-US"
-    utterance.voice = voz; // Asignar la voz seleccionada
+    utterance.lang = "es-AR"
+    //utterance.voice = voz; // Asignar la voz seleccionada
     utterance.rate = 1; // Velocidad fija
     window.speechSynthesis.speak(utterance);
 
