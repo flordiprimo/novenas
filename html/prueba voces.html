@@ -16,9 +16,6 @@
       border-radius: 5px;
       background-color: #f9f9f9;
     }
-    .property {
-      margin-left: 10px;
-    }
   </style>
 </head>
 <body>
@@ -43,15 +40,11 @@
         voiceDiv.classList.add("voice-info");
         voiceDiv.innerHTML = `<strong>Voz ${index + 1}</strong>`;
 
-        // Obtener las propiedades de la voz
-        const propiedades = Object.keys(voz);
-        propiedades.forEach((propiedad) => {
-          const propValue = voz[propiedad];
-          const propDiv = document.createElement("div");
-          propDiv.classList.add("property");
-          propDiv.innerHTML = `<strong>${propiedad}:</strong> ${propValue}`;
-          voiceDiv.appendChild(propDiv);
-        });
+        // Agregar propiedades específicas con formato "voice.propiedad"
+        voiceDiv.innerHTML += `<p><strong>voice.name:</strong> ${voz.name}</p>`;
+        voiceDiv.innerHTML += `<p><strong>voice.lang:</strong> ${voz.lang}</p>`;
+        voiceDiv.innerHTML += `<p><strong>voice.localService:</strong> ${voz.localService}</p>`;
+        voiceDiv.innerHTML += `<p><strong>voice.default:</strong> ${voz.default}</p>`;
 
         // Añadir el contenedor de la voz al principal
         vocesContainer.appendChild(voiceDiv);
