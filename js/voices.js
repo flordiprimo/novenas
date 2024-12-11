@@ -14,7 +14,7 @@ function obtenerVoces() {
     // Asegurarse de que hay al menos dos voces disponibles
     if (vocesDisponibles.length > 0) {
         // Seleccionar dos voces diferentes (cambia los criterios según tus necesidades)
-        voz1 = vocesDisponibles.find(voz => voz.lang.includes('es-AR') /*&& voz.name.includes('Google')*/) || vocesDisponibles.find(voz => voz.lang.includes('es-US') || voz.name.includes('Isabela')) || vocesDisponibles[1];
+        voz1 = vocesDisponibles.find(voz => voz.lang.includes('es-AR')) || vocesDisponibles.find(voz => voz.lang.includes('es-MX')) || vocesDisponibles.find(voz => voz.lang.includes('es-US')) || vocesDisponibles[1];
         voz2 = vocesDisponibles.find(voz => voz.lang.includes('es-ES') && voz.name.includes('Google')) ||vocesDisponibles.find(voz => voz.lang.includes('es-ES')) || vocesDisponibles[1];
         console.log('voces seleccionadas', voz1, voz2)
     }else{
@@ -43,8 +43,7 @@ function leerFragmento() {
     }
 
     let utterance = new SpeechSynthesisUtterance(fragmentos[indiceActual]);
-    utterance.lang = "es-AR"
-    //utterance.voice = voz; // Asignar la voz seleccionada
+    utterance.voice = voz; // Asignar la voz seleccionada
     utterance.rate = 1; // Velocidad fija
     window.speechSynthesis.speak(utterance);
 
@@ -82,12 +81,8 @@ function leerFragmento() {
     }
 
     let utterance = new SpeechSynthesisUtterance(fragmentos[indiceActual]);
-    //utterance.voice = voz; // Asignar la voz seleccionada
+    utterance.voice = voz; // Asignar la voz seleccionada
     utterance.rate = 1; // Velocidad fija
-    utterance.lang = "es-AR"
-    if(utterance.lang == undefined){
-        utterance.lang = "es-MX"
-    }
     window.speechSynthesis.speak(utterance);
     utteranceEnded = false
 
