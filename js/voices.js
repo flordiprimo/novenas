@@ -14,7 +14,7 @@ function obtenerVoces() {
     // Asegurarse de que hay al menos dos voces disponibles
     if (vocesDisponibles.length > 0) {
         // Seleccionar dos voces diferentes (cambia los criterios según tus necesidades)
-        voz1 = vocesDisponibles.find(voz => voz.lang.includes('es-AR')) || vocesDisponibles.find(voz => voz.lang.includes('es-MX')) || vocesDisponibles.find(voz => voz.lang.includes('es-US')) || vocesDisponibles[1];
+        voz1 = vocesDisponibles.find(voz => voz.lang.includes('es-AR') && voice.name.includes('Isabela')) || vocesDisponibles.find(voz => voz.lang.includes('es-MX') && voice.name.includes("Paulina")) || vocesDisponibles.find(voz => voz.lang.includes('es-US')) || vocesDisponibles[1];
         voz2 = vocesDisponibles.find(voz => voz.lang.includes('es-ES') && voz.name.includes('Google')) ||vocesDisponibles.find(voz => voz.lang.includes('es-ES')) || vocesDisponibles[1];
         console.log('voces seleccionadas', voz1, voz2)
     }else{
