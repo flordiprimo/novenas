@@ -1,79 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prueba de Voces</title>
+  <title>Prueba de Voces Disponibles</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
     }
-    .voice-list {
-      margin-top: 20px;
+    .voice-info {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
     }
-    .voice-item {
-      margin-bottom: 10px;
-    }
-    button {
+    .property {
       margin-left: 10px;
-      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <h1>Prueba de Voces Disponibles</h1>
-  <p>Haz clic en "Cargar Voces" para obtener las voces disponibles en este dispositivo.</p>
-  <button id="loadVoices">Cargar Voces</button>
-  <div id="voices" class="voice-list"></div>
+  <button id="cargarVoces">Cargar Voces</button>
+  <div id="vocesContainer"></div>
 
   <script>
-    const loadVoicesButton = document.getElementById('loadVoices');
-    const voicesContainer = document.getElementById('voices');
+    function cargarVoces() {
+      const vocesContainer = document.getElementById("vocesContainer");
+      vocesContainer.innerHTML = ""; // Limpiar el contenedor
 
-    // Función para listar y probar voces
-    function listarVoces() {
-      const voices = window.speechSynthesis.getVoices();
-
-      // Limpiar el contenedor
-      voicesContainer.innerHTML = '';
-
-      if (voices.length === 0) {
-        voicesContainer.innerHTML = '<p>No se encontraron voces disponibles.</p>';
+      const vocesDisponibles = window.speechSynthesis.getVoices();
+      if (vocesDisponibles.length === 0) {
+        vocesContainer.innerHTML = "<p>No se encontraron voces disponibles.</p>";
         return;
       }
 
-      voices.forEach((voice, index) => {
-        const voiceItem = document.createElement('div');
-        voiceItem.classList.add('voice-item');
+      vocesDisponibles.forEach((voz, index) => {
+        // Crear un contenedor para cada voz
+        const voiceDiv = document.createElement("div");
+        voiceDiv.classList.add("voice-info");
+        voiceDiv.innerHTML = `<strong>Voz ${index + 1}</strong>`;
 
-        // Mostrar nombre e idioma de la voz
-        voiceItem.innerHTML = `
-          <strong>${index + 1}. ${voice.name}</strong> (${voice.lang})
-          <button onclick="probarVoz(${index})">Probar</button>
-        `;
+        // Obtener las propiedades de la voz
+        const propiedades = Object.keys(voz);
+        propiedades.forEach((propiedad) => {
+          const propValue = voz[propiedad];
+          const propDiv = document.createElement("div");
+          propDiv.classList.add("property");
+          propDiv.innerHTML = `<strong>${propiedad}:</strong> ${propValue}`;
+          voiceDiv.appendChild(propDiv);
+        });
 
-        voicesContainer.appendChild(voiceItem);
+        // Añadir el contenedor de la voz al principal
+        vocesContainer.appendChild(voiceDiv);
       });
     }
 
-    // Función para probar una voz
-    function probarVoz(index) {
-      const voices = window.speechSynthesis.getVoices();
-      const utterance = new SpeechSynthesisUtterance("Hola, esta es una prueba de voz.");
-      utterance.voice = voices[index];
-      utterance.lang = voices[index].lang;
-      utterance.rate = 1.25; // Velocidad ajustada
-      window.speechSynthesis.speak(utterance);
+    // Asegurarse de que las voces estén cargadas
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.onvoiceschanged = cargarVoces;
     }
 
-    // Asignar evento al botón
-    loadVoicesButton.addEventListener('click', () => {
-      if (window.speechSynthesis.onvoiceschanged !== undefined) {
-        window.speechSynthesis.onvoiceschanged = listarVoces;
-      }
-      listarVoces(); // Intentar cargar voces inmediatamente
-    });
+    // Cargar las voces al hacer clic en el botón
+    document.getElementById("cargarVoces").addEventListener("click", cargarVoces);
   </script>
 </body>
 </html>
